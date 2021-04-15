@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include sbs_theme *.css
+recursive-include sbs_theme *.csv
+recursive-include sbs_theme *.html
+recursive-include sbs_theme *.ico
+recursive-include sbs_theme *.js
+recursive-include sbs_theme *.json
+recursive-include sbs_theme *.md
+recursive-include sbs_theme *.png
+recursive-include sbs_theme *.py
+recursive-include sbs_theme *.svg
+recursive-include sbs_theme *.txt
+recursive-exclude sbs_theme *.pyc
