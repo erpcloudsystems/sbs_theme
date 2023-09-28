@@ -9,7 +9,7 @@ app_color = "grey"
 app_email = "mg@erpcloud.systems"
 app_license = "MIT"
 
-
+# sbs
 doc_events = {
 	"Journal Entry": {
 		"before_insert": "sbs_theme.doctype_triggers.accounting.journal_entry.journal_entry.before_insert",
