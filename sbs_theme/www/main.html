@@ -16,9 +16,231 @@
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
     <![endif]-->
+
+    <style>
+      #specific-carousel {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    #specific-carousel .owl-nav {
+        /* Your specific navigation styles for this carousel */
+    }
+    
+    #specific-carousel .owl-theme .owl-dots .owl-dot.active span,
+    #specific-carousel .owl-theme .owl-dots .owl-dot:hover span {
+        background: #ff7b00 !important;
+    }
+    
+      .containere {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 10vh;
+    }
+
+    .centered-div-text {
+        background-color: #f0f0f0;
+        padding: 20px;
+        text-align: right;
+        max-width: 80%;
+    }
+
+    table {
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+  th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+  }
+
+  tr:nth-child(even) {
+      background-color: #f2f2f21e;
+  }
+
+  /* Add responsive styles for mobile devices */
+@media (max-width: 600px) {
+table {
+font-size: 12px; /* Decrease font size for smaller screens */
+}
+
+th, td {
+padding: 6px; /* Decrease padding for smaller screens */
+}
+.discover-tester{
+font-size: 22px;
+}
+.btn-text-mob{
+font-size: 9px;
+}
+
+}
+
+
+dialog {
+  width: 100vw;
+  height: 100vh;
+  position: relative; /* Added to make the position context for absolute positioning */
+  
+}
+.full-screen-dialog {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+.close-button {
+  position: absolute;
+  top: 10px; /* Adjust the top distance as needed */
+  right: 10px; /* Adjust the right distance as needed */
+  cursor: pointer;
+  color: #ffffff; /* Change the color as needed */
+  z-index: 100;    
+  font-size: 35px; /* Increase the font size to make it bigger */
+
+}
+
+.close-button:hover {
+  color: #ff0000; /* Change the hover color as needed */
+}
+
+
+.close-button2 {
+  position: absolute;
+  top: 10px; /* Adjust the top distance as needed */
+  right: 10px; /* Adjust the right distance as needed */
+  cursor: pointer;
+  color: #000000; /* Change the color as needed */
+  font-size: 35px; /* Increase the font size to make it bigger */
+  z-index: 100;
+}
+
+.close-button2:hover {
+  color: #ff0000; /* Change the hover color as needed */
+}
+
+
+.owl-carousel,
+.owl-carousel div {
+  height: 100%;
+}
+
+header {
+  position: relative;
+}
+
+h1,
+body {
+  margin: 0;
+  line-height: 100%;
+}
+
+.containerw {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.item--one {
+  
+}
+
+.item--two {
+
+}
+
+.item--three {
+
+}
+
+.item--four {
+
+}
+
+.item h1 {
+  color: #ffffff;
+  font-size: 4rem;
+}
+
+.owl-dots {
+  height: auto !important;
+  position: absolute;
+  inset: auto 50% 20px;
+  display: flex;
+  width: fit-content;
+  transform: translateX(-50%);
+}
+
+.owl-dot span {
+  width: 30px !important;
+  height: 5px !important;
+  border-radius: 2.5px !important;
+}
+
+
+    </style>
   </head>
   <body>
- 
+    <script>
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        nav: false,
+        dots: true
+      });
+
+
+      $(document).ready(function(){
+        $('#specific-carousel').owlCarousel({
+          loop: true,
+          margin: 0,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: true,
+              autoHeight: true
+            },
+            400: {
+              items: 1,
+              nav: true,
+              autoHeight: true
+            },
+            600: {
+              items: 1,
+              nav: true,
+              autoHeight: true
+            },
+            1000: {
+              items: 1,
+              nav: false,
+              loop: true,
+              autoplay: true,
+              autoplayTimeout: 2000,
+              autoplayHoverPause: false,
+              autoHeight: true
+            }
+          }
+        });
+      });
+      
+    </script>
     <div class="preloader loaded">
       <div class="preloader-body">
         <div class="cssload-container">
@@ -29,8 +251,8 @@
     </div>
     <div class="page">
       <div class="main-screen">
-        <h1>desire</h1>
-        <p>click to ENTER</p>
+        <h1>Butler</h1>
+        <p>Click To ENTER</p>
       </div>
       <!-- Swiper-->
       <section class="section swiper-container swiper-slider" data-loop="false" data-autoplay="false" data-simulate-touch="false" data-mousewheel="true" data-parallax="true">
@@ -39,21 +261,41 @@
           <!--home-->
           <div class="swiper-slide content video-bg-overlay vide_bg" data-vide-bg="/assets/sbs_theme/video/video-lg" data-vide-options="posterType: jpg, muted: true" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;fa-home swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
             <div class="parallax-scene container-screen">
-              <div class="layer container-screen container-screen-top parallax-scene-img-height parallax-scene-mobile" data-depth="0.04" style="opacity: 1; filter: blur(3px);"><img src="/assets/sbs_theme/images/home-04.png" alt=""></div>
-              <div class="layer container-screen container-screen-top parallax-scene-img-height parallax-scene-mobile" data-depth="0.1" style=" filter: blur(1.5px);"><img src="/assets/sbs_theme/images/home-03.png" alt=""></div>
-              <div class="layer container-screen container-screen-top parallax-scene-img-height" data-depth="0.25"><img src="/assets/sbs_theme/images/home-01.png" alt=""></div>
-              <div class="layer container-screen container-screen-top parallax-scene-img-height" data-depth="0.1"><img src="/assets/sbs_theme/images/home-02.png" alt=""></div>
+              <div class="section-bg-home">
+                <img src="" alt="Home Background Image" id="responsive-image" style="width: 100%; height: 100%; ">
+                <script>
+                    function updateImage() {
+                        var imageElement = document.getElementById('responsive-image');
+                        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                        var mobileImageURL = "{{ frappe.get_doc('Website Options').home_page_background_mobile }}";
+                        var desktopImageURL = "{{ frappe.get_doc('Website Options').home_back_ground }}";
+            
+                        if (screenWidth <= 700 && mobileImageURL) {
+                            imageElement.src = mobileImageURL;
+                        } else if (desktopImageURL) {
+                            imageElement.src = desktopImageURL;
+                        }
+                    }
+            
+                    // Call the function when the page loads and when the window resizes
+                    window.addEventListener('load', updateImage);
+                    window.addEventListener('resize', updateImage);
+            
+                    // Initial update
+                    updateImage();
+                </script>
+            </div>
             </div>
             <div class="swiper-slide-caption section-md">
               <div class="container">
                 <div class="row justify-content-lg-center">
                   <div class="col-lg-8">
                     <div class="main-page-box">
-                      <p class="subheading" data-swiper-parallax="-6000" data-swiper-parallax-opacity="0"><span class="subheading-title">desire</span><span class="subheading-decor">presents</span></p>
-                      <h1 data-swiper-parallax="-5000" data-swiper-parallax-opacity="0">Feel The rhythm!</h1>
-                      <h1 data-swiper-parallax="-4000" data-swiper-parallax-opacity="0">Feel The night!</h1>
+                      <!-- <p class="subheading" data-swiper-parallax="-6000" data-swiper-parallax-opacity="0"><span class="subheading-title">desire</span><span class="subheading-decor">presents</span></p> -->
+                      <!-- <h1 data-swiper-parallax="-5000" data-swiper-parallax-opacity="0">Feel The rhythm!</h1>
+                      <h1 data-swiper-parallax="-4000" data-swiper-parallax-opacity="0">Feel The night!</h1> -->
                       <!--hr-->
-                      <p class="subtitle" data-swiper-parallax="-3000" data-swiper-parallax-opacity="0"><span class="font-weight-bold">march 25</span> <span class="font-weight-normal">2018 </span>
+                      <!-- <p class="subtitle" data-swiper-parallax="-3000" data-swiper-parallax-opacity="0"><span class="font-weight-bold">march 25</span> <span class="font-weight-normal">2018 </span> -->
                       </p>
                     </div>
                   </div>
@@ -62,405 +304,331 @@
             </div>
           </div>
           <!--about-->
-          <div class="swiper-slide context-dark" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;About Us&lt;/span&gt;&lt;span class=&quot;fa-user swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
+          <div class="swiper-slide context-dark" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;About&lt;/span&gt;&lt;span class=&quot;fa-user swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
             <div class="parallax-scene container-screen">
-              <div class="layer container-screen" data-depth="0.3"><img src="/assets/sbs_theme/es/about-02.png" alt=""></div>
-              <div class="layer container-screen parallax-scene-img-height" data-depth="0.1"><img src="/assets/sbs_theme/images/about-01.png" alt=""></div>
+              <div class="about-bg">
+                <img src="" alt="about Background Image" id="responsive-image2">
+                <script>
+                    function updateImage() {
+                        var imageElement = document.getElementById('responsive-image2');
+                        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                        var mobileImageURL = "{{ frappe.get_doc('Website Options').about_background_mobile}}";
+                        var desktopImageURL = "{{ frappe.get_doc('Website Options').about_background }}";
+            
+                        if (screenWidth <= 700 && mobileImageURL) {
+                            imageElement.src = mobileImageURL;
+                        } else if (desktopImageURL) {
+                            imageElement.src = desktopImageURL;
+                        }
+                    }
+            
+                    // Call the function when the page loads and when the window resizes
+                    window.addEventListener('load', updateImage);
+                    window.addEventListener('resize', updateImage);
+            
+                    // Initial update
+                    updateImage();
+                </script>
+            </div> 
             </div>
-            <div class="swiper-slide-caption" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0">
               <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-lg-8">
-                    <div class="row row-20 justify-content-center justify-content-lg-start align-items-lg-center">
-                      <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-5">
-                        <div class="content-box bg-secondary index-1 pl-xxl-5 pr-xxl-5" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0">
-                          <h4>About us</h4>
-                          <p>Doloreas fertaseta lers ertaserta sety kertya aset aplicabo nerafaesdas skeras ertyus ersvis vaserat niptai ades. asoertayse badrays. Colernatur auonse quuntur magni dolores.</p><a class="button button-white" href="#" data-toggle="modal" data-target="#modal-about-us">more</a>
-                        </div>
-                      </div>
-                      <div class="col-md-8 col-lg-6 col-xl-6 col-xxl-4">
-                        <div class="content-box bg-accent text-lg-left content-box-carousel" data-swiper-parallax="-2000" data-swiper-parallax-opacity="0">
-                          <!-- Owl Carousel-->
-                          <div class="owl-carousel carousel-event" data-items="1" data-dots="false" data-nav="true" data-stage-padding="15" data-loop="false" data-margin="30" data-mouse-drag="false">
-                            <div class="event-box">
-                              <div class="event-date heading-2">17.10</div>
-                              <div class="event-title"><span class="text-white heading-2">magic</span><span class="text-secondary heading-3">dance </span><span class="text-primary-lighter heading-3">show</span></div>
-                            </div>
-                            <div class="event-box">
-                              <div class="event-date heading-2">20.11</div>
-                              <div class="event-title"><span class="text-white heading-2">DANCE</span><span class="text-secondary heading-3">ALL </span><span class="text-primary-lighter heading-3">NIGHT</span></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                <div class="row text-md-left">
+                  <div class="col-md-7 col-xl-8">
+                    <div class="offer-box">
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-xl-4">
+                    <div class="content-box bg-secondary index-1 pl-xxl-5 pr-xxl-5" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0">
+                      <span>{{ frappe.get_doc('Website Options').about_small_text }}</span>
+                      <h4>{{ frappe.get_doc('Website Options').about_text }}</h4>
+                      <p>{{ frappe.get_doc('Website Options').about_paragraph }}</p><a class="button button-white" href="#" data-toggle="modal" data-target="#modal-about-us">{{ frappe.get_doc('Website Options').about_button }}</a>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+              
           </div>
           <!--news-->
-          <div class="swiper-slide context-dark" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;News &amp; Events&lt;/span&gt;&lt;span class=&quot;fa-calendar swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
+          <div class="swiper-slide context-dark" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;Services&lt;/span&gt;&lt;span class=&quot;fa-calendar swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
             <div class="parallax-scene container-screen">
-              <div class="layer container-screen parallax-scene-img-height" data-depth="0.05"><img src="/assets/sbs_theme/images/news-01.jpg" alt=""></div>
-            </div>
-            <div class="swiper-slide-caption" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0">
-              <div class="container">
-                <div class="row row-20 justify-content-center">
-                  <div class="col-md-8 col-lg-3 col-xl-4 col-xxl-3 order-lg-2" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0">
-                    <div class="mt-lg-5">
-                      <h4>news <br class="d-none d-lg-inline-block">and <br class="d-none d-lg-inline-block">events</h4>
-                    </div>
-                  </div>
-                  <div class="col-md-8 col-lg-4 col-xl-3 order-lg-1" data-swiper-parallax="-1500" data-swiper-parallax-opacity="0">
-                    <div class="content-box-hexagon-container">
-                      <div class="content-box-hexagon hexagon-secondary-3"><span></span></div>
-                      <div class="content-box-hexagon-inner pl-md-5 pr-md-5 pl-lg-2 pr-lg-2 pl-xxl-5 pr-xxl-5">
-                        <h4>14.02.2018</h4>
-                        <p>Doloreas fertaseta lers ertaserta sety kertya aset aplicabo nerafaesdas skeras ertyus ersvis vaserat niptai ades. asoertayse badrays. Colernatur auonse quuntur magni dolores.</p><a class="button button-white" href="#" data-toggle="modal" data-target="#single-event">more</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-8 col-lg-4 col-xl-3 text-lg-left order-lg-3" data-swiper-parallax="-2000" data-swiper-parallax-opacity="0">
-                    <div class="content-box-hexagon-container">
-                      <div class="content-box-hexagon hexagon-secondary-2"><span></span></div>
-                      <div class="content-box-hexagon-inner"></div>
-                      <!-- Owl Carousel-->
-                      <div class="owl-carousel carousel-event" data-items="1" data-dots="false" data-nav="true" data-stage-padding="15" data-loop="false" data-margin="30" data-mouse-drag="false">
-                        <div class="event-box">
-                          <div class="event-date heading-2">15.10</div>
-                          <div class="event-title"><span class="text-white heading-2">magic</span><span class="text-white heading-3">dance </span><span class="text-white heading-3">show</span></div>
-                        </div>
-                        <div class="event-box">
-                          <div class="event-date heading-2">20.11</div>
-                          <div class="event-title"><span class="text-white heading-2">DANCE</span><span class="text-white heading-3">ALL </span><span class="text-white heading-3">NIGHT</span></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- offer-->
-          <div class="swiper-slide context-dark swiper-content-top" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;Special Offer&lt;/span&gt;&lt;span class=&quot;fa-briefcase swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
-            <div class="parallax-scene container-screen">
-              <div class="layer container-screen parallax-scene-img-height" data-depth="0.05"><img src="/assets/sbs_theme/images/offer-01.png" alt=""></div>
+              <div class="about-bg-wrapper">
+                <div class="about-bg">
+                    <img src="" alt="services Background Image" id="responsive-image3">
+                    <script>
+                        function updateImage() {
+                            var imageElement = document.getElementById('responsive-image3');
+                            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                            var mobileImageURL = "{{ frappe.get_doc('Website Options').service_background_mobile}}";
+                            var desktopImageURL = "{{ frappe.get_doc('Website Options').service_background }}";
+                
+                            if (screenWidth <= 700 && mobileImageURL) {
+                                imageElement.src = mobileImageURL;
+                            } else if (desktopImageURL) {
+                                imageElement.src = desktopImageURL;
+                            }
+                        }
+                
+                        // Call the function when the page loads and when the window resizes
+                        window.addEventListener('load', updateImage);
+                        window.addEventListener('resize', updateImage);
+                
+                        // Initial update
+                        updateImage();
+                    </script>
+                </div> 
+            </div><!-- about bg IMG end -->
             </div>
             <div class="container">
               <div class="row text-md-left">
-                <div class="col-md-10 col-xl-7">
+                <div class="col-md-7 col-xl-8">
                   <div class="offer-box">
-                    <div class="offer-box-subheading text-md-right" data-swiper-parallax="-3000" data-swiper-parallax-opacity="0">Every Day</div>
-                    <div class="offer-box-title" data-swiper-parallax="-2000" data-swiper-parallax-opacity="0">unlimited</div>
-                    <div class="offer-box-subtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">karaoke </div>
+                    
+                  </div>
+                </div>
+                <div class="col-md-5 col-xl-4">
+                  <div class="content-box bg-secondary index-1 pl-xxl-5 pr-xxl-5" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0" >
+                    <span>{{ frappe.get_doc('Website Options').services_left_small_text }}</span>
+                    <h4>{{ frappe.get_doc('Website Options').services_left_text }}</h4>
+                    <p>{{ frappe.get_doc('Website Options').services_left_paragraph }}</p><a class="button button-white" href="#" onclick="window.dialoge.showModal();">{{ frappe.get_doc('Website Options').services_button }}</a>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <!-- test -->
+            
+          </div>
+          <!-- offer-->
+          <div class="swiper-slide context-dark swiper-content-top" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;Why Choose Us&lt;/span&gt;&lt;span class=&quot;fa-briefcase swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
+            <div class="parallax-scene container-screen">
+              <div class="about-bg-wrapper">
+                <div class="about-bg">
+                  <img src="" alt="why Background Image" id="responsive-image4">
+                  <script>
+                    function updateImage() {
+                      var imageElement = document.getElementById('responsive-image4');
+                      var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                      var mobileImageURL = "{{ frappe.get_doc('Website Options').why_background_mobile}}";
+                      var desktopImageURL = "{{ frappe.get_doc('Website Options').why_background }}";
+          
+                      if (screenWidth <= 700 && mobileImageURL) {
+                        imageElement.src = mobileImageURL;
+                      } else if (desktopImageURL) {
+                        imageElement.src = desktopImageURL;
+                      }
+                    }
+          
+                    // Call the function when the page loads and when the window resizes
+                    window.addEventListener('load', updateImage);
+                    window.addEventListener('resize', updateImage);
+          
+                    // Initial update
+                    updateImage();
+                  </script>
+                </div>
+              </div><!-- about bg IMG end -->
+            </div>
+            <div class="container">
+              <div class="row text-md-left">
+                <div class="col-md-7 col-xl-8">
+                  <div class="offer-box">
+                    
+                  </div>
+                </div>
+                <div class="col-md-5 col-xl-4">
+                  <div class="content-box bg-secondary index-1 pl-xxl-5 pr-xxl-5" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0" style="margin-top:300px">
+                    <h4>{{ frappe.get_doc('Website Options').why_text }}</h4>
+                    <ul>
+                      {% for point in frappe.get_doc('Website Options').why_paragraph.split('\n') %}
+                          <li>{{ point.strip() }}</li>
+                      {% endfor %}
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
           <!--downloads-->
-          <div class="swiper-slide context-dark swiper-content-bottom" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;Downloads&lt;/span&gt;&lt;span class=&quot;fa-cloud-download swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
+          <div class="swiper-slide context-dark swiper-content-bottom" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;Information&lt;/span&gt;&lt;span class=&quot;fa-cloud-download swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
             <!-- <a href="https://www.freepik.com/free-photos-vectors/mockup">Mockup psd created by Qeaql-studio - Freepik.com</a>-->
             <div class="parallax-scene container-screen">
-              <div class="layer container-screen parallax-scene-img-height" data-depth="0.08"> <img src="/assets/sbs_theme/images/download-02.png" alt=""></div>
-              <div class="layer container-screen parallax-scene-img-height" data-depth="0.05"><img src="/assets/sbs_theme/images/download-01.png" alt=""></div>
-              <div class="layer container-screen parallax-scene-img-height" data-depth="0.35"><img src="/assets/sbs_theme/images/download-03.png" alt=""></div>
-              <div class="layer container-screen parallax-scene-img-height" data-depth="0.15"><img src="/assets/sbs_theme/images/download-04.png" alt=""></div>
-              <div class="layer container-screen parallax-scene-img-height" data-depth="0.22"><img src="/assets/sbs_theme/images/download-05.png" alt=""></div>
+              <div class="about-bg-wrapper">
+                <div class="about-bg">
+                    <img src="" alt="info Background Image" id="responsive-image5">
+                    <script>
+                        function updateImage() {
+                            var imageElement = document.getElementById('responsive-image5');
+                            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                            var mobileImageURL = "{{ frappe.get_doc('Website Options').info_background_mobile}}";
+                            var desktopImageURL = "{{ frappe.get_doc('Website Options').info_background }}";
+                
+                            if (screenWidth <= 700 && mobileImageURL) {
+                                imageElement.src = mobileImageURL;
+                            } else if (desktopImageURL) {
+                                imageElement.src = desktopImageURL;
+                            }
+                        }
+                
+                        // Call the function when the page loads and when the window resizes
+                        window.addEventListener('load', updateImage);
+                        window.addEventListener('resize', updateImage);
+                
+                        // Initial update
+                        updateImage();
+                    </script>
+                </div> 
+            </div><!-- about bg IMG end -->
             </div>
-            <div class="swiper-slide-caption" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0">
-              <div class="container section-lg">
-                <div class="row justify-content-lg-center">
-                  <div class="col-lg-8">
-                    <!-- Owl Carousel-->
-                    <div class="owl-carousel carousel-download-box" data-items="1" data-dots="false" data-nav="true" data-stage-padding="15" data-loop="false" data-margin="30" data-mouse-drag="false">
-                      <div class="download-box-inner">
-                        <ul class="list-tracks">
-                          <li>
-                            <div class="jp-player-init jp-player-js">
-                              <div class="jp-jplayer"></div>
-                              <div class="jp-audio jp-audio-0" role="application" aria-label="media player">
-                                <ul class="jp-player-list">
-                                  <li class="jp-player-list-item" data-jp-title="Cro Magnon Man" data-jp-artist="The Stark Palace" data-jp-mp3="audio/sound.mp3"></li>
-                                </ul>
-                                <div class="jp-interface">
-                                  <div class="jp-controls-wrapper">
-                                    <div class="jp-button jp-playpaus-button">
-                                      <button class="jp-btn jp-play" role="button" tabindex="0"></button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta">Hasetas.mp3</div>
-                                <div class="jp-playlist jp-playlist--hidden">
-                                  <ul>
-                                    <li> </li>
-                                  </ul>
-                                </div>
-                                <div class="jp-no-solution"><span>Update Required</span>           To play the media you will need to either update your browser to a recent version or update your<a href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                              </div>
-                            </div><a class="download-link" href="#"> </a>
-                          </li>
-                          <li>
-                            <div class="jp-player-init jp-player-js">
-                              <div class="jp-jplayer"></div>
-                              <div class="jp-audio jp-audio-1" role="application" aria-label="media player">
-                                <ul class="jp-player-list">
-                                  <li class="jp-player-list-item" data-jp-title="Cro Magnon Man" data-jp-artist="The Stark Palace" data-jp-mp3="audio/sound.mp3"></li>
-                                </ul>
-                                <div class="jp-interface">
-                                  <div class="jp-controls-wrapper">
-                                    <div class="jp-button jp-playpaus-button">
-                                      <button class="jp-btn jp-play" role="button" tabindex="0"></button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta">Mese feugiase.mp3</div>
-                                <div class="jp-playlist jp-playlist--hidden">
-                                  <ul>
-                                    <li> </li>
-                                  </ul>
-                                </div>
-                                <div class="jp-no-solution"><span>Update Required</span>           To play the media you will need to either update your browser to a recent version or update your<a href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                              </div>
-                            </div><a class="download-link" href="#"> </a>
-                          </li>
-                          <li>
-                            <div class="jp-player-init jp-player-js">
-                              <div class="jp-jplayer"></div>
-                              <div class="jp-audio jp-audio-2" role="application" aria-label="media player">
-                                <ul class="jp-player-list">
-                                  <li class="jp-player-list-item" data-jp-title="Cro Magnon Man" data-jp-artist="The Stark Palace" data-jp-mp3="audio/sound.mp3"></li>
-                                </ul>
-                                <div class="jp-interface">
-                                  <div class="jp-controls-wrapper">
-                                    <div class="jp-button jp-playpaus-button">
-                                      <button class="jp-btn jp-play" role="button" tabindex="0"></button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta">Strihas.mp3</div>
-                                <div class="jp-playlist jp-playlist--hidden">
-                                  <ul>
-                                    <li> </li>
-                                  </ul>
-                                </div>
-                                <div class="jp-no-solution"><span>Update Required</span>           To play the media you will need to either update your browser to a recent version or update your<a href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                              </div>
-                            </div><a class="download-link" href="#"> </a>
-                          </li>
-                          <li>
-                            <div class="jp-player-init jp-player-js">
-                              <div class="jp-jplayer"></div>
-                              <div class="jp-audio jp-audio-3" role="application" aria-label="media player">
-                                <ul class="jp-player-list">
-                                  <li class="jp-player-list-item" data-jp-title="Cro Magnon Man" data-jp-artist="The Stark Palace" data-jp-mp3="audio/sound.mp3"></li>
-                                </ul>
-                                <div class="jp-interface">
-                                  <div class="jp-controls-wrapper">
-                                    <div class="jp-button jp-playpaus-button">
-                                      <button class="jp-btn jp-play" role="button" tabindex="0"></button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta">Sit aeroisya.mp3</div>
-                                <div class="jp-playlist jp-playlist--hidden">
-                                  <ul>
-                                    <li> </li>
-                                  </ul>
-                                </div>
-                                <div class="jp-no-solution"><span>Update Required</span>           To play the media you will need to either update your browser to a recent version or update your<a href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                              </div>
-                            </div><a class="download-link" href="#"> </a>
-                          </li>
-                          <li>
-                            <div class="jp-player-init jp-player-js">
-                              <div class="jp-jplayer"></div>
-                              <div class="jp-audio jp-audio-4" role="application" aria-label="media player">
-                                <ul class="jp-player-list">
-                                  <li class="jp-player-list-item" data-jp-title="Cro Magnon Man" data-jp-artist="The Stark Palace" data-jp-mp3="audio/sound.mp3"></li>
-                                </ul>
-                                <div class="jp-interface">
-                                  <div class="jp-controls-wrapper">
-                                    <div class="jp-button jp-playpaus-button">
-                                      <button class="jp-btn jp-play" role="button" tabindex="0"></button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta">Lacsque.mp3</div>
-                                <div class="jp-playlist jp-playlist--hidden">
-                                  <ul>
-                                    <li> </li>
-                                  </ul>
-                                </div>
-                                <div class="jp-no-solution"><span>Update Required</span>           To play the media you will need to either update your browser to a recent version or update your<a href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                              </div>
-                            </div><a class="download-link" href="#"></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="download-box-inner">
-                        <ul class="list-tracks">
-                          <li>
-                            <div class="jp-player-init jp-player-js">
-                              <div class="jp-jplayer"></div>
-                              <div class="jp-audio jp-audio-5" role="application" aria-label="media player">
-                                <ul class="jp-player-list">
-                                  <li class="jp-player-list-item" data-jp-title="Cro Magnon Man" data-jp-artist="The Stark Palace" data-jp-mp3="audio/sound.mp3"></li>
-                                </ul>
-                                <div class="jp-interface">
-                                  <div class="jp-controls-wrapper">
-                                    <div class="jp-button jp-playpaus-button">
-                                      <button class="jp-btn jp-play" role="button" tabindex="0"></button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta">Hasetas.mp3</div>
-                                <div class="jp-playlist jp-playlist--hidden">
-                                  <ul>
-                                    <li> </li>
-                                  </ul>
-                                </div>
-                                <div class="jp-no-solution"><span>Update Required</span>           To play the media you will need to either update your browser to a recent version or update your<a href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                              </div>
-                            </div><a class="download-link" href="#"></a>
-                          </li>
-                          <li>
-                            <div class="jp-player-init jp-player-js">
-                              <div class="jp-jplayer"></div>
-                              <div class="jp-audio jp-audio-6" role="application" aria-label="media player">
-                                <ul class="jp-player-list">
-                                  <li class="jp-player-list-item" data-jp-title="Cro Magnon Man" data-jp-artist="The Stark Palace" data-jp-mp3="audio/sound.mp3"></li>
-                                </ul>
-                                <div class="jp-interface">
-                                  <div class="jp-controls-wrapper">
-                                    <div class="jp-button jp-playpaus-button">
-                                      <button class="jp-btn jp-play" role="button" tabindex="0"></button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta">Mese feugiase.mp3</div>
-                                <div class="jp-playlist jp-playlist--hidden">
-                                  <ul>
-                                    <li> </li>
-                                  </ul>
-                                </div>
-                                <div class="jp-no-solution"><span>Update Required</span>           To play the media you will need to either update your browser to a recent version or update your<a href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                              </div>
-                            </div><a class="download-link" href="#"></a>
-                          </li>
-                          <li>
-                            <div class="jp-player-init jp-player-js">
-                              <div class="jp-jplayer"></div>
-                              <div class="jp-audio jp-audio-7" role="application" aria-label="media player">
-                                <ul class="jp-player-list">
-                                  <li class="jp-player-list-item" data-jp-title="Cro Magnon Man" data-jp-artist="The Stark Palace" data-jp-mp3="audio/sound.mp3"></li>
-                                </ul>
-                                <div class="jp-interface">
-                                  <div class="jp-controls-wrapper">
-                                    <div class="jp-button jp-playpaus-button">
-                                      <button class="jp-btn jp-play" role="button" tabindex="0"></button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta">Strihas.mp3</div>
-                                <div class="jp-playlist jp-playlist--hidden">
-                                  <ul>
-                                    <li> </li>
-                                  </ul>
-                                </div>
-                                <div class="jp-no-solution"><span>Update Required</span>           To play the media you will need to either update your browser to a recent version or update your<a href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                              </div>
-                            </div><a class="download-link" href="#"></a>
-                          </li>
-                          <li>
-                            <div class="jp-player-init jp-player-js">
-                              <div class="jp-jplayer"></div>
-                              <div class="jp-audio jp-audio-8" role="application" aria-label="media player">
-                                <ul class="jp-player-list">
-                                  <li class="jp-player-list-item" data-jp-title="Cro Magnon Man" data-jp-artist="The Stark Palace" data-jp-mp3="audio/sound.mp3"></li>
-                                </ul>
-                                <div class="jp-interface">
-                                  <div class="jp-controls-wrapper">
-                                    <div class="jp-button jp-playpaus-button">
-                                      <button class="jp-btn jp-play" role="button" tabindex="0"></button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta">Sit aeroisya.mp3</div>
-                                <div class="jp-playlist jp-playlist--hidden">
-                                  <ul>
-                                    <li> </li>
-                                  </ul>
-                                </div>
-                                <div class="jp-no-solution"><span>Update Required</span>           To play the media you will need to either update your browser to a recent version or update your<a href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                              </div>
-                            </div><a class="download-link" href="#"></a>
-                          </li>
-                          <li>
-                            <div class="jp-player-init jp-player-js">
-                              <div class="jp-jplayer"></div>
-                              <div class="jp-audio jp-audio-9" role="application" aria-label="media player">
-                                <ul class="jp-player-list">
-                                  <li class="jp-player-list-item" data-jp-title="Cro Magnon Man" data-jp-artist="The Stark Palace" data-jp-mp3="audio/sound.mp3"></li>
-                                </ul>
-                                <div class="jp-interface">
-                                  <div class="jp-controls-wrapper">
-                                    <div class="jp-button jp-playpaus-button">
-                                      <button class="jp-btn jp-play" role="button" tabindex="0"></button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="jp-meta">Lacsque.mp3</div>
-                                <div class="jp-playlist jp-playlist--hidden">
-                                  <ul>
-                                    <li> </li>
-                                  </ul>
-                                </div>
-                                <div class="jp-no-solution"><span>Update Required</span>           To play the media you will need to either update your browser to a recent version or update your<a href="http://get.adobe.com/flashplayer/" target="_blank"> Flash plugin</a>.</div>
-                              </div>
-                            </div><a class="download-link" href="#"></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+            <div class="container">
+              <div class="row text-md-left">
+                <div class="col-md-7 col-xl-8">
+                  <div class="offer-box">
+                    
+                  </div>
+                </div>
+                <div class="col-md-5 col-xl-4">
+                  <div class="content-box bg-secondary index-1 pl-xxl-5 pr-xxl-5" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0">
+                    <h4>{{ frappe.get_doc('Website Options').table_title }}</h4>
+                                            <table>
+                                                <tr>
+                                                    <th>{{ frappe.get_doc('Website Options').table_header_1 }}</th>
+                                                    <th>{{ frappe.get_doc('Website Options').table_header_2 }}</th>
+                                                    <th>{{ frappe.get_doc('Website Options').table_header_3 }}</th>
+                                                </tr>
+                                                <tr>
+                                                    <td >{{ frappe.get_doc('Website Options').table_row_1}}</td>
+                                                    <td>{{ frappe.get_doc('Website Options').table_row_2 }}</td>
+                                                    <td>{{ frappe.get_doc('Website Options').table_row_3 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td >{{ frappe.get_doc('Website Options').table_row_4 }}</td>
+                                                    <td>{{ frappe.get_doc('Website Options').table_row_5 }}</td>
+                                                    <td>{{ frappe.get_doc('Website Options').table_row_6 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td >{{ frappe.get_doc('Website Options').table_row_7 }}</td>
+                                                    <td>{{ frappe.get_doc('Website Options').table_row_8 }}</td>
+                                                    <td>{{ frappe.get_doc('Website Options').table_row_9 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>{{ frappe.get_doc('Website Options').table_row_10 }}</td>
+                                                    <td>{{ frappe.get_doc('Website Options').table_row_11 }}</td>
+                                                    <td>{{ frappe.get_doc('Website Options').table_row_12 }}</td>
+                                                </tr>
+                        
+                                            </table>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!--contacts-->
-          <div class="swiper-slide context-dark" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;Contacts&lt;/span&gt;&lt;span class=&quot;fa-phone swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
+          <div class="swiper-slide context-dark" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;How We Care&lt;/span&gt;&lt;span class=&quot;fa-phone swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
             <div class="parallax-scene container-screen">
-              <div class="layer container-screen parallax-scene-img-height" data-depth="0.01" style="opacity: 1;"><img src="/assets/sbs_theme/images/contact-02.png" alt=""></div>
+              <div class="about-bg-wrapper">
+                <div class="about-bg">
+                    <img src="" alt="how Background Image" id="responsive-image6">
+                    <script>
+                        function updateImage() {
+                            var imageElement = document.getElementById('responsive-image6');
+                            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                            var mobileImageURL = "{{ frappe.get_doc('Website Options').how_background_mobile}}";
+                            var desktopImageURL = "{{ frappe.get_doc('Website Options').how_background }}";
+                
+                            if (screenWidth <= 700 && mobileImageURL) {
+                                imageElement.src = mobileImageURL;
+                            } else if (desktopImageURL) {
+                                imageElement.src = desktopImageURL;
+                            }
+                        }
+                
+                        // Call the function when the page loads and when the window resizes
+                        window.addEventListener('load', updateImage);
+                        window.addEventListener('resize', updateImage);
+                
+                        // Initial update
+                        updateImage();
+                    </script>
+                </div> 
+            </div><!-- about bg IMG end -->
             </div>
-            <div class="swiper-slide-caption" data-swiper-parallax="-2000" data-swiper-parallax-opacity="0">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-lg-8">
-                    <div class="row row-20 justify-content-center justify-content-lg-between align-items-center">
-                      <div class="col-md-8 col-lg-5 col-xl-4 col-xxl-4">
-                        <div class="content-box bg-accent index-1 pl-xxl-5 pr-xxl-5 contact-box">
-                          <address>8901 Marmora Road, Glasgow, D04 89GR.</address>
-                          <ul>
-                            <li><span>Telephone:</span> <a href="tel:#">+1 800 603 6535</a>
-                            </li>
-                            <li><span>E-mail:</span> <a class="text-secondary-4" href="mailto:#">mail@demolink.org</a>
-                            </li>
-                          </ul><a class="button button-white button-lg" href="#" data-toggle="modal" data-target="#appointment">contact</a>
-                        </div>
-                      </div>
-                      <div class="col-md-8 col-lg-5 col-xl-4 col-xxl-4">
-                        <div class="content-box content-box-map">
-                          <div class="google-map-container" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-zoom="15" data-styles="[{&quot;featureType&quot;:&quot;all&quot;,&quot;elementType&quot;:&quot;all&quot;,&quot;stylers&quot;:[{&quot;invert_lightness&quot;:true},{&quot;saturation&quot;:10},{&quot;lightness&quot;:30},{&quot;gamma&quot;:0.5},{&quot;hue&quot;:&quot;#435158&quot;}]}]">
-                            <div class="google-map"></div>
-                            <ul class="google-map-markers">
-                              <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow" data-icon="/assets/sbs_theme/images/gmap_marker.png" data-icon-active="/assets/sbs_theme/images/gmap_marker_active.png"></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            <div class="container">
+              <div class="row text-md-left">
+                <div class="col-md-7 col-xl-8">
+                  <div class="offer-box">
+                    
+                  </div>
+                </div>
+                <div class="col-md-5 col-xl-4">
+                  <div class="content-box bg-secondary index-1 pl-xxl-5 pr-xxl-5" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0" >
+                    <h4> {{ frappe.get_doc('Website Options').how_text }}</h4>
+                    <ul>
+                      {% for point in frappe.get_doc('Website Options').how_paragraph.split('\n') %}
+                          <li>{{ point.strip() }}</li>
+                      {% endfor %}
+                  </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--contacts-->
+          <div class="swiper-slide context-dark" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;Contact Us&lt;/span&gt;&lt;span class=&quot;fa-phone swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
+            <div class="parallax-scene container-screen">
+              <div class="about-bg-wrapper">
+                <div class="about-bg">
+                    <img src="" alt="contact Background Image" id="responsive-image7">
+                    <script>
+                        function updateImage() {
+                            var imageElement = document.getElementById('responsive-image7');
+                            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                            var mobileImageURL = "{{ frappe.get_doc('Website Options').contact_background_mobile}}";
+                            var desktopImageURL = "{{ frappe.get_doc('Website Options').contact_background }}";
+                
+                            if (screenWidth <= 700 && mobileImageURL) {
+                                imageElement.src = mobileImageURL;
+                            } else if (desktopImageURL) {
+                                imageElement.src = desktopImageURL;
+                            }
+                        }
+                
+                        // Call the function when the page loads and when the window resizes
+                        window.addEventListener('load', updateImage);
+                        window.addEventListener('resize', updateImage);
+                
+                        // Initial update
+                        updateImage();
+                    </script>
+                </div> 
+            </div><!-- about bg IMG end -->
+            </div>
+            <div class="container">
+              <div class="row text-md-left">
+                <div class="col-md-7 col-xl-8">
+                  <div class="offer-box">
+                    
+                  </div>
+                </div>
+                <div class="col-md-5 col-xl-4">
+                  <div class="content-box bg-secondary index-1 pl-xxl-5 pr-xxl-5" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0" >
+                    <h4>{{ frappe.get_doc('Website Options').contact_title }}</h4>
+                    <p>
+                      {{ frappe.get_doc('Website Options').contact_description }}
+                    </p>
+                    <a class="button button-white" href="#" data-toggle="modal" data-target="#appointment">{{ frappe.get_doc('Website Options').contact_button }}</a>
+                    <div style="padding: 2%;"></div>
+                    <hr><h4>OR</h4> <hr>
+                    <br>
+                    <h4 class="contact-text-new">Contact us for more information</h4>
+                    <strong>Email</strong><br>
+                    <span class="contact-info-mail"><a class="link-underline link-underline-dark" href="mailto:{{ frappe.get_doc('Website Options').contact_mail }}">{{ frappe.get_doc('Website Options').contact_mail }}</a></span> <br>
+                    <strong>Phone</strong><br>
+                    <span class="contact-info-mail">{{ frappe.get_doc('Website Options').contact_phone }}</span> <br>
+                    <strong>WhatsApp</strong><br>
+                    <span class="contact-info-mail">{{ frappe.get_doc('Website Options').contact_whatsapp }}</span>
                   </div>
                 </div>
               </div>
@@ -470,19 +638,144 @@
         </div>
         <!-- Swiper Pagination-->
         <div class="navigation">
-          <div class="container"><a class="brand" href="index.html"><img class="brand-logo-dark" src="/files/logo.png" alt="" width="187" height="70" srcset="/assets/sbs_theme/images/logo-retina-374x140.png 2x"/></a>
+          <div class="container"><a class="brand" href="#home"><img class="brand-logo-dark" src="{{ frappe.get_doc('Website Options').logo }}" alt="" width="187" height="70" srcset="{{ frappe.get_doc('Website Options').logo }}"/></a>
             <div class="swiper-pagination" data-index-bullet="true"></div>
             <ul class="list-inline">
-              <li><a class="icon icon-xxs icon-gray icon-circle fa fa-facebook" href="#"></a></li>
-              <li><a class="icon icon-xxs icon-gray icon-circle fa fa-twitter" href="#"></a></li>
-              <li><a class="icon icon-xxs icon-gray icon-circle fa fa-google-plus" href="#"></a></li>
-              <li><a class="icon icon-xxs icon-gray icon-circle fa fa-vimeo" href="#"></a></li>
-              <li><a class="icon icon-xxs icon-gray icon-circle fa fa-youtube" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-gray icon-circle fa fa-facebook" href="{{ frappe.get_doc('Website Options').facebook }}"></a></li>
+              <li><a class="icon icon-xxs icon-gray icon-circle fa fa-twitter" href="{{ frappe.get_doc('Website Options').twitter }}"></a></li>
+              <li><a class="icon icon-xxs icon-gray icon-circle fa fa-instagram" href="{{ frappe.get_doc('Website Options').instagram }}"></a></li>
+              <li><a class="icon icon-xxs icon-gray icon-circle fa fa-youtube" href="{{ frappe.get_doc('Website Options').youtube }}"></a></li>
               <li><a class="icon icon-xxs icon-gray icon-circle fa fa-pinterest" href="/login#login"></a></li>
             </ul>
           </div>
         </div>
       </section>
+
+      <dialog id="dialoge" class="full-screen-dialog">
+        <div class="close-button2" onclick="window.dialoge.close();">&#10006;</div>
+
+        <header>
+          <div class="owl-carousel owl-theme">
+            <div class="item item--one">
+              <div class="containerw">
+                <h1 style="z-index: 100000;">Slider 1</h1>
+                <div class="about-bg">
+                  <img src="" alt="discover Background Image" id="discover_img1">
+                  <script>
+                      function updateImage() {
+                          var imageElement = document.getElementById('discover_img1');
+                          var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                          var mobileImageURL = "{{ frappe.get_doc('Website Options').discover_img1_mobile}}";
+                          var desktopImageURL = "{{ frappe.get_doc('Website Options').discover_img1_background }}";
+              
+                          if (screenWidth <= 700 && mobileImageURL) {
+                              imageElement.src = mobileImageURL;
+                          } else if (desktopImageURL) {
+                              imageElement.src = desktopImageURL;
+                          }
+                      }
+              
+                      // Call the function when the page loads and when the window resizes
+                      window.addEventListener('load', updateImage);
+                      window.addEventListener('resize', updateImage);
+              
+                      // Initial update
+                      updateImage();
+                  </script>
+                </div> 
+              </div>
+            </div>
+            <div class="item item--two">
+              <div class="containerw">
+                <h1 style="z-index: 100000;">Slider 2</h1>
+                <div class="about-bg">
+                  <img src="" alt="discover Background Image" id="discover_img2">
+                  <script>
+                      function updateImage() {
+                          var imageElement = document.getElementById('discover_img2');
+                          var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                          var mobileImageURL = "{{ frappe.get_doc('Website Options').discover_img2_mobile}}";
+                          var desktopImageURL = "{{ frappe.get_doc('Website Options').discover_img2_background }}";
+              
+                          if (screenWidth <= 700 && mobileImageURL) {
+                              imageElement.src = mobileImageURL;
+                          } else if (desktopImageURL) {
+                              imageElement.src = desktopImageURL;
+                          }
+                      }
+              
+                      // Call the function when the page loads and when the window resizes
+                      window.addEventListener('load', updateImage);
+                      window.addEventListener('resize', updateImage);
+              
+                      // Initial update
+                      updateImage();
+                  </script>
+              </div> 
+              </div>
+            </div>
+            <div class="item item--three">
+              <div class="containerw">
+                <h1 style="z-index: 100000;">Slider 3</h1>
+                <div class="about-bg">
+                  <img src="" alt="discover Background Image" id="discover_img3">
+                  <script>
+                      function updateImage() {
+                          var imageElement = document.getElementById('discover_img3');
+                          var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                          var mobileImageURL = "{{ frappe.get_doc('Website Options').discover_img3_mobile}}";
+                          var desktopImageURL = "{{ frappe.get_doc('Website Options').discover_img3_background }}";
+              
+                          if (screenWidth <= 700 && mobileImageURL) {
+                              imageElement.src = mobileImageURL;
+                          } else if (desktopImageURL) {
+                              imageElement.src = desktopImageURL;
+                          }
+                      }
+              
+                      // Call the function when the page loads and when the window resizes
+                      window.addEventListener('load', updateImage);
+                      window.addEventListener('resize', updateImage);
+              
+                      // Initial update
+                      updateImage();
+                  </script>
+              </div> 
+              </div>
+            </div>
+            <div class="item item--four">
+              <div class="containerw">
+                <h1 style="z-index: 100000;">Slider 4</h1>
+                <div class="about-bg">
+                  <img src="" alt="discover Background Image" id="discover_img4">
+                  <script>
+                      function updateImage() {
+                          var imageElement = document.getElementById('discover_img4');
+                          var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                          var mobileImageURL = "{{ frappe.get_doc('Website Options').discover_img4_mobile}}";
+                          var desktopImageURL = "{{ frappe.get_doc('Website Options').discover_img4_background }}";
+              
+                          if (screenWidth <= 700 && mobileImageURL) {
+                              imageElement.src = mobileImageURL;
+                          } else if (desktopImageURL) {
+                              imageElement.src = desktopImageURL;
+                          }
+                      }
+              
+                      // Call the function when the page loads and when the window resizes
+                      window.addEventListener('load', updateImage);
+                      window.addEventListener('resize', updateImage);
+              
+                      // Initial update
+                      updateImage();
+                  </script>
+              </div> 
+              </div>
+            </div>
+          </div>
+        </header>
+      </dialog>
+      
       <div class="modal fade" id="modal-about-us" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false">
         <div class="modal-custom-inner">
           <div class="modal-dialog" role="document">
@@ -491,9 +784,46 @@
                 <div class="container">
                   <div class="row justify-content-center">
                     <div class="col-10 col-lg-8 col-xl-6"><a class="close close-modal-content-box" href="#" data-dismiss="modal">x</a>
-                      <h3>A Few Words<br class="d-none d-md-inline-block"> About Us</h3>
-                      <p>Dastqui dolorem ipsumquia dolsitmet conse tequam eius. Asmodi tempora incid. Dent ut labore t dolore magnam. Naliquam quae. Rat voleneni ullam corporis suscipit labasic ut aliquidea commodi consequatur. Aquis autem vel eum iure reprehenderit, muytasas dresasaser. Esse, quam nihil molestiae consequatur, vel illum. Dastqui dolorem ipsumquia dolsitmet conse tequam eius. Asmodi tempora incid. Dent ut labore t dolore magnam. Naliquam quae.</p>
-                      <p>Rat voleneni ullam corporis suscipit labasic ut aliquidea commodi consequatur. Aquis autem vel eum iure reprehenderit. Asas dresasaser. Esse, quam nihil molestiae consequatur, vel illum. Dastqui dolorem ipsumquia dolsitmet conse tequam eius. Asmodi tempora incid. Dent ut labore t dolore magnam. Naliquam quae. Rat voleneni ullam corporis suscipit labasic ut aliquidea commodi consequatur. Aquis autem vel eum iure reprehenderit, muytasas dresasaser. Esse, quam nihil molestiae consequatur, vel illum. Dastqui dolorem ipsumquia dolsitmet conse tequam eius. Asmodi tempo. Asas dresasaser. Esse, quam nihil molestiae consequatur, vel illum. Dastqui dolorem ipsumquia dolsitmet conse tequam eius. Asmodi tempora incid. Dent ut labore t dolore magnam. Naliquam quae. Rat voleneni ullam corporis suscipit labasic ut aliquidea</p>
+                      <!-- timeline slider here -->
+                      <div class="owl-carousel owl-theme image-slider" id="specific-carousel">
+
+                        <div>
+                          <h3 style="font-size: 18px;">
+                            <span>{{ frappe.get_doc('Website Options').about_small_text_2 }}</span>
+                          </h3>
+                          <h3 style="font-size: 22px;">
+                            {{ frappe.get_doc('Website Options').about_text_2 }}
+                          </h3>
+                          <p>
+                            {{ frappe.get_doc('Website Options').about_paragraph_2 }}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 style="font-size: 18px;">
+                            <span>{{ frappe.get_doc('Website Options').about_small_text_3 }}</span>
+                          </h3>
+                          <h3 style="font-size: 22px;">
+                            {{ frappe.get_doc('Website Options').about_text_3 }}
+                          </h3>
+                          <p>
+                            {{ frappe.get_doc('Website Options').about_paragraph_3 }}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 style="font-size: 18px;">
+                            <span>{{ frappe.get_doc('Website Options').about_small_text_4 }}</span>
+                          </h3>
+                          <h3 style="font-size: 22px;">
+                            {{ frappe.get_doc('Website Options').about_text_4 }}
+                          </h3>
+                          <p>
+                            {{ frappe.get_doc('Website Options').about_paragraph_4 }}
+                          </p>
+                        </div>
+                        
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -578,3 +908,18 @@
     <!-- coded by JeremyLuis-->
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ frappe.get_doc('Website Options').title }}</title>
+
+        <meta content="" name="description">
+        <meta content="" name="author">
+        <meta content="" name="keywords">
+        <meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <!-- Wylex v1.0 || ex nihilo || August 2020 -->
+        <!-- style start -->
+        <link href="/assets/sbs_theme/new_theme/css/plugins.css" media="all" rel="stylesheet" type="text/css">
+        <link href="/assets/sbs_theme/new_theme/css/style.css" media="all" rel="stylesheet" type="text/css"><!-- style end -->
+        <!-- google fonts start -->
+        <link href="http://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CRacing+Sans+One" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap" rel="stylesheet"><!-- google fonts end -->
+        <style>
+            h2 {
+                font-family: Arial, sans-serif !important;
+            }
+            
+
+            table {
+                font-family: Arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+    
+            th, td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+    
+            tr:nth-child(even) {
+                background-color: #f2f2f21e;
+            }
+
+            /* Add responsive styles for mobile devices */
+@media (max-width: 600px) {
+    table {
+        font-size: 12px; /* Decrease font size for smaller screens */
+    }
+
+    th, td {
+        padding: 6px; /* Decrease padding for smaller screens */
+    }
+}
+
+dialog {
+    width: 100vw;
+    height: 100vh;
+    position: relative; /* Added to make the position context for absolute positioning */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px; /* Adjust the top distance as needed */
+    right: 10px; /* Adjust the right distance as needed */
+    cursor: pointer;
+    color: #ffffff; /* Change the color as needed */
+    z-index: 1; /* Ensure the button is above other content */
+    font-size: 35px; /* Increase the font size to make it bigger */
+
+}
+
+.close-button:hover {
+    color: #ff0000; /* Change the hover color as needed */
+}
+
+            
+        </style>
+    </head>
+    <body>
+        <!-- preloader start -->
+        <div class="preloader-bg"></div>
+        <div id="preloader">
+            <div id="preloader-status">
+                <div class="preloader-position loader">
+                    <span></span>
+                </div>
+            </div>
+        </div><!-- preloader end -->
+        <!-- logo start -->
+        <a class="logo element-color-switch">
+        <div class="logo-img fadeIn-element"></div></a><!-- logo end -->
+        <!-- navigation trigger start -->
+        <div class="menu-trigger navigation-icon fadeIn-element" id="menu-mobile-btn">
+            <button class="lines-button minus menu-toggle" id="menu-mobile-caller" type="button"><span class="lines inverse"></span></button>
+        </div><!-- navigation trigger end -->
+        <!-- navigation start -->
+        <div id="ui-layer">
+            <div id="menu-wrapper">
+                <div id="menu-mobile">
+                    <div class="menu-nav-wrapper">
+                        <nav class="menu-nav">
+                            <ul>
+                                <li>
+                                    <a class="menu-state active" href="#home">Home</a>
+                                </li>
+                                <li>
+                                    <a class="menu-state" href="#about">About</a>
+                                </li>
+                                <li>
+                                    <a class="menu-state" href="#services">Services</a>
+                                </li>
+                                <li>
+                                    <a class="menu-state" href="#discover">Discover</a>
+                                </li>
+                                <li>
+                                    <a class="menu-state" href="#why">Why Choose Us</a>
+                                </li>
+                                <li>
+                                    <a class="menu-state" href="#info">Info</a>
+                                </li>
+                                <li>
+                                    <a class="menu-state" href="#care">Care</a>
+                                </li>
+                                <li>
+                                    <a class="menu-state" href="#contact">Contact</a>
+                                </li>
+                                <li class="credits">
+                                    <a href="#">&copy; 2023 All Rights Reserved.</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div><!-- navigation end -->
+        <!-- fullPage start -->
+        <div id="fullpage">
+            <!-- section home start -->
+            <div class="section overlay overlay-dark-60" id="section0">
+                <!-- vertical lines start -->
+                <div class="vertical-lines-wrapper fadeIn-element">
+                    <div class="vertical-lines"></div>
+                </div><!-- vertical lines end -->
+                <!-- section title start -->
+                <div class="section-title section-title-home fadeIn-element">
+                    <div class="section-title-heading section-title-heading-home" style="font-family: 'Arimo', sans-serif;">
+                        {{ frappe.get_doc('Website Options').header }}
+                    </div>
+                </div><!-- section title end -->
+                
+                <!-- home bg start -->
+                <div class="section-bg-home">
+                    <img src="" alt="Home Background Image" id="responsive-image">
+                    <script>
+                        function updateImage() {
+                            var imageElement = document.getElementById('responsive-image');
+                            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                            var mobileImageURL = "{{ frappe.get_doc('Website Options').home_page_background_mobile }}";
+                            var desktopImageURL = "{{ frappe.get_doc('Website Options').home_back_ground }}";
+                
+                            if (screenWidth <= 700 && mobileImageURL) {
+                                imageElement.src = mobileImageURL;
+                            } else if (desktopImageURL) {
+                                imageElement.src = desktopImageURL;
+                            }
+                        }
+                
+                        // Call the function when the page loads and when the window resizes
+                        window.addEventListener('load', updateImage);
+                        window.addEventListener('resize', updateImage);
+                
+                        // Initial update
+                        updateImage();
+                    </script>
+                </div>
+                
+                
+                
+                             <!-- bottom credits start -->
+                <div class="bottom-credits fadeIn-element">
+                    <a class="link-underline-home" href="#">{{ frappe.get_doc('Website Options').header }}</a> {{ frappe.get_doc('Website Options').credits }}
+                </div><!-- bottom credits end -->
+                <!-- social icons start -->
+                <div class="social-icons-wrapper fadeIn-element">
+                    <ul class="social-icons">
+                        <li class="social-icon">
+                            <a class="ion-social-twitter" href="{{ frappe.get_doc('Website Options').twitter }}"></a>
+                        </li>
+                        <li class="social-icon">
+                            <a class="ion-social-facebook" href="{{ frappe.get_doc('Website Options').facebook }}"></a>
+                        </li>
+                        <li class="social-icon">
+                            <a class="ion-social-googleplus" href="{{ frappe.get_doc('Website Options').twitter }}"></a>
+                        </li>
+                        <li class="social-icon">
+                            <a class="ion-social-youtube" href="{{ frappe.get_doc('Website Options').youtube }}"></a>
+                        </li>
+                        <li class="social-icon">
+                            <a class="ion-social-linkedin" href="{{ frappe.get_doc('Website Options').linkedin }}"></a>
+                        </li>
+                        <li class="social-icon">
+                            <a class="ion-social-instagram" href="{{ frappe.get_doc('Website Options').instagram }}"></a>
+                        </li>
+                        <li class="social-icon">
+                            <a class="ion-social-pinterest" href="{{ frappe.get_doc('Website Options').pinterest }}"></a>
+                        </li>
+                    </ul>
+                </div><!-- social icons end -->
+                <!-- scroll indicator start -->
+                <div class="scroll-indicator fadeIn-element">
+                    <div class="scroll-indicator-wrapper">
+                        <div class="scroll-line"></div>
+                    </div>
+                </div><!-- scroll indicator end -->
+            </div><!-- section home end -->
+            <!-- section about start -->
+            <div class="section" id="section1">
+                <!-- section title start -->
+                <div class="section-title section-title-left">
+                    <div class="section-title-heading" style="font-family: 'Arimo', sans-serif;">{{ frappe.get_doc('Website Options').about_title }}</div>
+                </div>
+                
+                <!-- section title end -->
+                <!-- container start -->
+                <div class="container-fluid sections">
+                    <!-- row start -->
+                    <div class="row">
+                        <!-- col start -->
+                        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding">
+                            <!-- about left start -->
+                            <div class="slick-about">
+                                <!-- about content wrapper start -->
+                                <div class="about-content-wrapper">
+                                    <!-- about content start -->
+                                    <div class="about-content">
+                                        <div class="about-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-light">
+                                                <span>{{ frappe.get_doc('Website Options').about_small_text }}</span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-light" style="font-family: 'Arial', sans-serif;"         >
+                                                {{ frappe.get_doc('Website Options').about_text }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <div class="about-txt">
+                                                <p>
+                                                    {{ frappe.get_doc('Website Options').about_paragraph }}
+                                                </p>
+                                            </div>
+                                            <br>
+                                            <div class="contact-modal-launcher-wrapper">
+                                                <div class="the-button" onclick="window.dialog.showModal();">
+                                                    {{ frappe.get_doc('Website Options').about_button }}
+                                                </div>
+                                            </div><!-- contact form launcher end -->
+
+                                        <dialog id="dialog">
+                                            <div class="close-button" onclick="window.dialog.close();">&#10006;</div>
+
+                                            <div class="hero-fullscreen">
+                                                <!-- timeline container start -->
+                                                <div class="hero-bg timeline-container">
+                                                    <div class="timeline fadeIn-element">
+                                                        <!-- swiper container start -->
+                                                        <div class="swiper-container">
+                                                            <!-- swiper wrapper start -->
+                                                            <div class="swiper-wrapper">
+                                                                <!-- swiper slide 1 start -->
+                                                                <div class="swiper-slide swiper-slide-bg-1 overlay overlay-dark-60" data-year="2020">
+                                                                    <div class="swiper-slide-content">
+                                                                        <span class="timeline-year">2020</span>
+                                                                        <h4 class="timeline-title">
+                                                                            Simplicity is complex
+                                                                        </h4>
+                                                                        <p class="timeline-text">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in dui nec erat pulvinar fringilla nec vel nisi. Proin lobortis nisi eu viverra <a class=
+                                                                            "link-underline" href="#">convallis</a>.
+                                                                        </p>
+                                                                    </div>
+                                                                </div><!-- swiper slide 1 end -->
+                                                                <!-- swiper slide 2 start -->
+                                                                <div class="swiper-slide swiper-slide-bg-2 overlay overlay-dark-60" data-year="2019">
+                                                                    <div class="swiper-slide-content">
+                                                                        <span class="timeline-year">2019</span>
+                                                                        <h4 class="timeline-title">
+                                                                            Design is a process
+                                                                        </h4>
+                                                                        <p class="timeline-text">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in dui nec erat pulvinar fringilla nec vel nisi. Proin lobortis nisi eu viverra <a class=
+                                                                            "link-underline" href="#">convallis</a>.
+                                                                        </p>
+                                                                    </div>
+                                                                </div><!-- swiper slide 2 end -->
+                                                                <!-- swiper slide 3 start -->
+                                                                <div class="swiper-slide swiper-slide-bg-3 overlay overlay-dark-60" data-year="2018">
+                                                                    <div class="swiper-slide-content">
+                                                                        <span class="timeline-year">2018</span>
+                                                                        <h4 class="timeline-title">
+                                                                            Aesthetic is a decision
+                                                                        </h4>
+                                                                        <p class="timeline-text">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in dui nec erat pulvinar fringilla nec vel nisi. Proin lobortis nisi eu viverra <a class=
+                                                                            "link-underline" href="#">convallis</a>.
+                                                                        </p>
+                                                                    </div>
+                                                                </div><!-- swiper slide 3 end -->
+                                                                <!-- swiper slide 4 start -->
+                                                                <div class="swiper-slide swiper-slide-bg-4 overlay overlay-dark-60" data-year="2017">
+                                                                    <div class="swiper-slide-content">
+                                                                        <span class="timeline-year">2017</span>
+                                                                        <h4 class="timeline-title">
+                                                                            Style is everything
+                                                                        </h4>
+                                                                        <p class="timeline-text">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in dui nec erat pulvinar fringilla nec vel nisi. Proin lobortis nisi eu viverra <a class=
+                                                                            "link-underline" href="#">convallis</a>.
+                                                                        </p>
+                                                                    </div>
+                                                                </div><!-- swiper slide 4 end -->
+                                                            </div><!-- swiper wrapper end -->
+                                                            <!-- swiper navigation start -->
+                                                            <div class="swiper-button-prev fadeIn-element"></div>
+                                                            <div class="swiper-button-next fadeIn-element"></div>
+                                                            <div class="swiper-pagination fadeIn-element"></div><!-- swiper navigation end -->
+                                                        </div><!-- swiper container end -->
+                                                    </div>
+                                                </div><!-- timeline container end -->
+                                            </div><!-- hero bg end -->
+                                        </dialog>
+                                        </div>
+                                        
+                                    </div><!-- about content end -->
+                                </div><!-- about content wrapper end -->
+                                <div class="about-content-wrapper">
+                                    <!-- about content start -->
+                                    <div class="about-content">
+                                        <div class="about-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-light">
+                                                <span>{{ frappe.get_doc('Website Options').about_small_text_2 }}</span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-light">
+                                                {{ frappe.get_doc('Website Options').about_text_2 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <div class="about-txt">
+                                                <p>
+                                                    {{ frappe.get_doc('Website Options').about_paragraph_2 }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div><!-- about content end -->
+                                </div><!-- about content wrapper end -->
+                                <div class="about-content-wrapper">
+                                    <!-- about content start -->
+                                    <div class="about-content">
+                                        <div class="about-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-light">
+                                                <span>{{ frappe.get_doc('Website Options').about_small_text_3 }}</span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-light">
+                                                {{ frappe.get_doc('Website Options').about_text_3 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <div class="about-txt">
+                                                <p>
+                                                    {{ frappe.get_doc('Website Options').about_paragraph_3 }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div><!-- about content end -->
+                                </div><!-- about content wrapper end -->
+                                <div class="about-content-wrapper">
+                                    <!-- about content start -->
+                                    <div class="about-content">
+                                        <div class="about-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-light">
+                                                <span>{{ frappe.get_doc('Website Options').about_small_text_4 }}</span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-light">
+                                                {{ frappe.get_doc('Website Options').about_text_4 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <div class="about-txt">
+                                                <p>
+                                                    {{ frappe.get_doc('Website Options').about_paragraph_4 }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div><!-- about content end -->
+                                </div><!-- about content wrapper end -->
+
+                                <!-- about content wrapper start -->
+                                <div class="about-content-wrapper">
+                                    <!-- about content start -->
+                                    <div class="about-content">
+                                        <div class="about-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-light">
+                                                <span>{{ frappe.get_doc('Website Options').about_small_text_5 }}</span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-light">
+                                                {{ frappe.get_doc('Website Options').about_text_5 }}
+                                            </h2>
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <div class="about-txt">
+                                                <p>
+                                                    {{ frappe.get_doc('Website Options').about_paragraph_5 }}
+                                                </p>
+                                            </div>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <!-- skills bar start -->
+                                            <div class="show-skillbar">
+                                                <!-- skill 1 start -->
+                                                <div class="skillbar" data-percent="{{ frappe.get_doc('Website Options').about_stats_percent_1 }}">
+                                                    <span class="skillbar-title">{{ frappe.get_doc('Website Options').about_stats_1 }}</span>
+                                                    <div class="skillbar-bar"></div><span class="skill-bar-percent"></span>
+                                                </div><!-- skill 1 end -->
+                                                <!-- skill 2 start -->
+                                                <div class="skillbar" data-percent="{{ frappe.get_doc('Website Options').about_stats_percent_2 }}">
+                                                    <span class="skillbar-title">{{ frappe.get_doc('Website Options').about_stats_2 }}</span>
+                                                    <div class="skillbar-bar"></div><span class="skill-bar-percent"></span>
+                                                </div><!-- skill 2 end -->
+                                                <!-- skill 3 start -->
+                                                <div class="skillbar" data-percent="{{ frappe.get_doc('Website Options').about_stats_percent_3 }}">
+                                                    <span class="skillbar-title">{{ frappe.get_doc('Website Options').about_stats_3 }}</span>
+                                                    <div class="skillbar-bar"></div><span class="skill-bar-percent"></span>
+                                                </div><!-- skill 3 end -->
+                                                <!-- skill 4 start -->
+                                                <div class="skillbar" data-percent="{{ frappe.get_doc('Website Options').about_stats_percent_4 }}">
+                                                    <span class="skillbar-title">{{ frappe.get_doc('Website Options').about_stats_4 }}</span>
+                                                    <div class="skillbar-bar"></div><span class="skill-bar-percent"></span>
+                                                </div><!-- skill 4 end -->
+                                            </div><!-- skills bar end -->
+                                        </div>
+                                    </div><!-- about content end -->
+                                </div><!-- about content wrapper end -->
+                                
+                                
+                            </div><!-- about left end -->
+                        </div><!-- col end -->
+                        <!-- col start -->
+                        <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding">
+                            <!-- about right start -->
+                            <div class="overlay overlay-inverse-dark-70">
+                                <!-- about bg IMG start -->
+                                <div class="about-bg-wrapper">
+                                    <div class="about-bg">
+                                        <img src="{{ frappe.get_doc('Website Options').about_background }}" alt="About Background Image">
+                                    </div> 
+                                </div><!-- about bg IMG end -->
+                            </div><!-- about right end -->
+                        </div><!-- col end -->
+                    </div><!-- row end -->
+                </div><!-- container end -->
+            </div><!-- section about end -->
+            <!-- section services start -->
+            <div class="section" id="section2">
+                <!-- col start -->
+<div class="col-md-6 col-sm-6 col-sm-push-6 nopadding">
+    <!-- about right start -->
+    <div class="overlay overlay-inverse-dark-70">
+        <!-- about bg IMG start -->
+        <div class="about-bg-wrapper">
+
+            <div class="about-bg">
+                <img src="{{ frappe.get_doc('Website Options').service_background }}" alt="About Background Image">
+            </div>
+        </div><!-- about bg IMG end -->
+    </div><!-- about right end -->
+</div><!-- col end -->
+<!-- col start -->
+<div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding">
+    <!-- about left start -->
+    <div class="slick-about">
+        <!-- about content wrapper start -->
+        <div class="about-content-wrapper">
+            <!-- about content start -->
+            <div class="about-content">
+                <div class="about-content-inner">
+                    <h2 class="section-subheading section-subheading-about section-subheading-light">
+                        <span>{{ frappe.get_doc('Website Options').services_left_small_text }}</span>
+                    </h2>
+                    <!-- inner divider start -->
+                    <div class="inner-divider-half"></div><!-- inner divider end -->
+                    <h2 class="section-heading section-heading-about section-heading-light">
+                        {{ frappe.get_doc('Website Options').services_left_text }}
+                    </h2>
+                    <!-- inner divider start -->
+                    <div class="inner-divider"></div><!-- inner divider end -->
+                    <div class="about-txt">
+                        <p>
+                            {{ frappe.get_doc('Website Options').services_left_paragraph }}
+                        </p>
+                    </div>
+                </div>
+            </div><!-- about content end -->
+        </div><!-- about content wrapper end -->
+    </div><!-- about left end -->
+</div><!-- col end -->
+
+            </div><!-- section services end -->
+            
+            <!-- section news start -->
+            <div class="section" id="section3">
+                <!-- section title start -->
+                <div class="section-title section-title-left">
+                    <div class="section-title-heading" style="font-family: 'Arimo', sans-serif;">
+                        {{ frappe.get_doc('Website Options').discover_title }}
+                    </div>
+                </div><!-- section title end -->
+                <!-- news IMG carousel wrapper start -->
+                <div class="news-page-img-wrapper">
+                    <!-- news IMG carousel start -->
+                    <div class="owl-carousel" id="news-page-img-carousel">
+                        <!-- news IMG carousel item start -->
+                        <div class="item item-grid-size news-page-img-carousel-item news-page-img-carousel-item-1 overlay overlay-inverse-dark-35">
+                            <!-- news item IMG hover effect start -->
+                            <a class="link-wrap c-btn-news" data-id="news-more-1"><span></span><span></span></a><!-- news item IMG hover effect end -->
+                            <!-- news item description start -->
+                            <div class="description">
+                                <h4>
+                                    {{ frappe.get_doc('Website Options').service_description_1 }}
+                                </h4><span>{{ frappe.get_doc('Website Options').service_small_description_1 }}</span>
+                            </div><!-- news item description end -->
+                        </div><!-- news IMG carousel item end -->
+                        <!-- news IMG carousel item start -->
+                        <div class="item item-grid-size news-page-img-carousel-item news-page-img-carousel-item-2 overlay overlay-inverse-dark-35">
+                            <!-- news item IMG hover effect start -->
+                            <a class="link-wrap c-btn-news" data-id="news-more-2"><span></span><span></span></a><!-- news item IMG hover effect end -->
+                            <!-- news item description start -->
+                            <div class="description">
+                                <h4>
+                                    {{ frappe.get_doc('Website Options').service_description_2 }}
+                                </h4><span>{{ frappe.get_doc('Website Options').service_small_description_2 }}</span>
+                            </div><!-- news item description end -->
+                        </div><!-- news IMG carousel item end -->
+                        <!-- news IMG carousel item start -->
+                        <div class="item item-grid-size news-page-img-carousel-item news-page-img-carousel-item-3 overlay overlay-inverse-dark-35">
+                            <!-- news item IMG hover effect start -->
+                            <a class="link-wrap c-btn-news" data-id="news-more-3"><span></span><span></span></a><!-- news item IMG hover effect end -->
+                            <!-- news item description start -->
+                            <div class="description">
+                                <h4>
+                                    {{ frappe.get_doc('Website Options').service_description_3 }}
+                                </h4><span>{{ frappe.get_doc('Website Options').service_small_description_3 }}</span>
+                            </div><!-- news item description end -->
+                        </div><!-- news IMG carousel item end -->
+                        <!-- news IMG carousel item start -->
+                        <div class="item item-grid-size news-page-img-carousel-item news-page-img-carousel-item-4 overlay overlay-inverse-dark-35">
+                            <!-- news item IMG hover effect start -->
+                            <a class="link-wrap c-btn-news" data-id="news-more-4"><span></span><span></span></a><!-- news item IMG hover effect end -->
+                            <!-- news item description start -->
+                            <div class="description">
+                                <h4>
+                                    {{ frappe.get_doc('Website Options').service_description_4 }}
+                                </h4><span>{{ frappe.get_doc('Website Options').service_small_description_4 }}</span>
+                            </div><!-- news item description end -->
+                        </div><!-- news IMG carousel item end -->
+                        <!-- news IMG carousel item start -->
+                        <div class="item item-grid-size news-page-img-carousel-item news-page-img-carousel-item-4 overlay overlay-inverse-dark-35">
+                            <!-- news item IMG hover effect start -->
+                            <a class="link-wrap c-btn-news" data-id="news-more-5"><span></span><span></span></a><!-- news item IMG hover effect end -->
+                            <!-- news item description start -->
+                            <div class="description">
+                                <h4>
+                                    {{ frappe.get_doc('Website Options').service_description_5 }}
+                                </h4><span>{{ frappe.get_doc('Website Options').service_small_description_5 }}</span>
+                            </div><!-- news item description end -->
+                        </div><!-- news IMG carousel item end -->
+                        <!-- news IMG carousel item start -->
+                        <div class="item item-grid-size news-page-img-carousel-item news-page-img-carousel-item-4 overlay overlay-inverse-dark-35">
+                            <!-- news item IMG hover effect start -->
+                            <a class="link-wrap c-btn-news" data-id="news-more-6"><span></span><span></span></a><!-- news item IMG hover effect end -->
+                            <!-- news item description start -->
+                            <div class="description">
+                                <h4>
+                                    {{ frappe.get_doc('Website Options').service_description_6 }}
+                                </h4><span>{{ frappe.get_doc('Website Options').service_small_description_6 }}</span>
+                            </div><!-- news item description end -->
+                        </div><!-- news IMG carousel item end -->
+                        <!-- news IMG carousel item start -->
+                        <div class="item item-grid-size news-page-img-carousel-item news-page-img-carousel-item-4 overlay overlay-inverse-dark-35">
+                            <!-- news item IMG hover effect start -->
+                            <a class="link-wrap c-btn-news" data-id="news-more-7"><span></span><span></span></a><!-- news item IMG hover effect end -->
+                            <!-- news item description start -->
+                            <div class="description">
+                                <h4>
+                                    {{ frappe.get_doc('Website Options').service_description_7 }}
+                                </h4><span>{{ frappe.get_doc('Website Options').service_small_description_7 }}</span>
+                            </div><!-- news item description end -->
+                        </div><!-- news IMG carousel item end -->
+                        <!-- news IMG carousel item start -->
+                        <div class="item item-grid-size news-page-img-carousel-item news-page-img-carousel-item-4 overlay overlay-inverse-dark-35">
+                            <!-- news item IMG hover effect start -->
+                            <a class="link-wrap c-btn-news" data-id="news-more-8"><span></span><span></span></a><!-- news item IMG hover effect end -->
+                            <!-- news item description start -->
+                            <div class="description">
+                                <h4>
+                                    {{ frappe.get_doc('Website Options').service_description_8 }}
+                                </h4><span>{{ frappe.get_doc('Website Options').service_small_description_8 }}</span>
+
+                            </div><!-- news item description end -->
+                        </div><!-- news IMG carousel item end -->
+                    </div><!-- news IMG carousel end -->
+                </div><!-- news IMG carousel wrapper end -->
+                <!-- news MORE carousel item start -->
+                <div class="news-more-1 panel-left panel-left-bg-all panel-left-bg-1 overlay overlay-inverse-dark-35"></div>
+                <div class="news-more-1 panel-right">
+                    <!-- center container start -->
+                    <div class="center-container">
+                        <!-- center block start -->
+                        <div class="center-block">
+                            <!-- news MORE carousel content start -->
+                            <div class="img-fullwidth-wrapper">
+                                <div class="news-content">
+                                    <div class="news-content-inner">
+                                        <!-- news modal content start -->
+                                        <div class="news-modal-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-dark">
+                                                <span>1</span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-dark">
+                                                {{ frappe.get_doc('Website Options').content_title_1 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <p class="news-modal-txt news-modal-txt-dark">
+                                                {{ frappe.get_doc('Website Options').content_1 }}
+                                            </p>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <!-- news modal closer start -->
+                                            <div class="news-modal-close-wrapper">
+                                                <div class="the-button inverse-dark">
+                                                    Close
+                                                </div>
+                                            </div><!-- news modal closer end -->
+                                        </div><!-- news modal content end -->
+                                    </div>
+                                </div>
+                            </div><!-- news MORE carousel content end -->
+                        </div><!-- center block end -->
+                    </div><!-- center container end -->
+                </div><!-- news MORE carousel item end -->
+                <!-- news MORE carousel item start -->
+                <div class="news-more-2 panel-left panel-left-bg-all panel-left-bg-2 overlay overlay-inverse-dark-35"></div>
+                <div class="news-more-2 panel-right">
+                    <!-- center container start -->
+                    <div class="center-container">
+                        <!-- center block start -->
+                        <div class="center-block">
+                            <!-- news MORE carousel content start -->
+                            <div class="img-fullwidth-wrapper">
+                                <div class="news-content">
+                                    <div class="news-content-inner">
+                                        <!-- news modal content start -->
+                                        <div class="news-modal-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-dark">
+                                                <span>2</span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-dark">
+                                                {{ frappe.get_doc('Website Options').content_title_2 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <p class="news-modal-txt news-modal-txt-dark">
+                                                {{ frappe.get_doc('Website Options').content_2 }}
+                                            </p>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <!-- news modal closer start -->
+                                            <div class="news-modal-close-wrapper">
+                                                <div class="the-button inverse-dark">
+                                                    Close
+                                                </div>
+                                            </div><!-- news modal closer end -->
+                                        </div><!-- news modal content end -->
+                                    </div>
+                                </div>
+                            </div><!-- news MORE carousel content end -->
+                        </div><!-- center block end -->
+                    </div><!-- center container end -->
+                </div><!-- news MORE carousel item end -->
+                <!-- news MORE carousel item start -->
+                <div class="news-more-3 panel-left panel-left-bg-all panel-left-bg-3 overlay overlay-inverse-dark-35"></div>
+                <div class="news-more-3 panel-right">
+                    <!-- center container start -->
+                    <div class="center-container">
+                        <!-- center block start -->
+                        <div class="center-block">
+                            <!-- news MORE carousel content start -->
+                            <div class="img-fullwidth-wrapper">
+                                <div class="news-content">
+                                    <div class="news-content-inner">
+                                        <!-- news modal content start -->
+                                        <div class="news-modal-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-dark">
+                                                <span> 3 </span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-dark">
+                                                {{ frappe.get_doc('Website Options').content_title_3 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <p class="news-modal-txt news-modal-txt-dark">
+                                                {{ frappe.get_doc('Website Options').content_3 }}
+                                            </p>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <!-- news modal closer start -->
+                                            <div class="news-modal-close-wrapper">
+                                                <div class="the-button inverse-dark">
+                                                    Close
+                                                </div>
+                                            </div><!-- news modal closer end -->
+                                        </div><!-- news modal content end -->
+                                    </div>
+                                </div>
+                            </div><!-- news MORE carousel content end -->
+                        </div><!-- center block end -->
+                    </div><!-- center container end -->
+                </div><!-- news MORE carousel item end -->
+                <!-- news MORE carousel item start -->
+                <div class="news-more-4 panel-left panel-left-bg-all panel-left-bg-4 overlay overlay-inverse-dark-35"></div>
+                <div class="news-more-4 panel-right">
+                    <!-- center container start -->
+                    <div class="center-container">
+                        <!-- center block start -->
+                        <div class="center-block">
+                            <!-- news MORE carousel content start -->
+                            <div class="img-fullwidth-wrapper">
+                                <div class="news-content">
+                                    <div class="news-content-inner">
+                                        <!-- news modal content start -->
+                                        <div class="news-modal-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-dark">
+                                                <span> 4 </span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-dark">
+                                                {{ frappe.get_doc('Website Options').content_title_4 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <p class="news-modal-txt news-modal-txt-dark">
+                                                {{ frappe.get_doc('Website Options').content_4 }}
+                                            </p>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <!-- news modal closer start -->
+                                            <div class="news-modal-close-wrapper">
+                                                <div class="the-button inverse-dark">
+                                                    Close
+                                                </div>
+                                            </div><!-- news modal closer end -->
+                                        </div><!-- news modal content end -->
+                                    </div>
+                                </div>
+                            </div><!-- news MORE carousel content end -->
+                        </div><!-- center block end -->
+                    </div><!-- center container end -->
+                </div><!-- news MORE carousel item end -->
+                <div class="news-more-5 panel-right">
+                    <!-- center container start -->
+                    <div class="center-container">
+                        <!-- center block start -->
+                        <div class="center-block">
+                            <!-- news MORE carousel content start -->
+                            <div class="img-fullwidth-wrapper">
+                                <div class="news-content">
+                                    <div class="news-content-inner">
+                                        <!-- news modal content start -->
+                                        <div class="news-modal-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-dark">
+                                                <span> 5 </span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-dark">
+                                                {{ frappe.get_doc('Website Options').content_title_5 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <p class="news-modal-txt news-modal-txt-dark">
+                                                {{ frappe.get_doc('Website Options').content_5 }}
+                                            </p>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <!-- news modal closer start -->
+                                            <div class="news-modal-close-wrapper">
+                                                <div class="the-button inverse-dark">
+                                                    Close
+                                                </div>
+                                            </div><!-- news modal closer end -->
+                                        </div><!-- news modal content end -->
+                                    </div>
+                                </div>
+                            </div><!-- news MORE carousel content end -->
+                        </div><!-- center block end -->
+                    </div><!-- center container end -->
+                </div><!-- news MORE carousel item end -->
+                <div class="news-more-6 panel-right">
+                    <!-- center container start -->
+                    <div class="center-container">
+                        <!-- center block start -->
+                        <div class="center-block">
+                            <!-- news MORE carousel content start -->
+                            <div class="img-fullwidth-wrapper">
+                                <div class="news-content">
+                                    <div class="news-content-inner">
+                                        <!-- news modal content start -->
+                                        <div class="news-modal-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-dark">
+                                                <span> 6 </span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-dark">
+                                                {{ frappe.get_doc('Website Options').content_title_6 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <p class="news-modal-txt news-modal-txt-dark">
+                                                {{ frappe.get_doc('Website Options').content_6 }}
+                                            </p>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <!-- news modal closer start -->
+                                            <div class="news-modal-close-wrapper">
+                                                <div class="the-button inverse-dark">
+                                                    Close
+                                                </div>
+                                            </div><!-- news modal closer end -->
+                                        </div><!-- news modal content end -->
+                                    </div>
+                                </div>
+                            </div><!-- news MORE carousel content end -->
+                        </div><!-- center block end -->
+                    </div><!-- center container end -->
+                </div><!-- news MORE carousel item end -->
+                <div class="news-more-7 panel-right">
+                    <!-- center container start -->
+                    <div class="center-container">
+                        <!-- center block start -->
+                        <div class="center-block">
+                            <!-- news MORE carousel content start -->
+                            <div class="img-fullwidth-wrapper">
+                                <div class="news-content">
+                                    <div class="news-content-inner">
+                                        <!-- news modal content start -->
+                                        <div class="news-modal-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-dark">
+                                                <span> 7 </span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-dark">
+                                                {{ frappe.get_doc('Website Options').content_title_7 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <p class="news-modal-txt news-modal-txt-dark">
+                                                {{ frappe.get_doc('Website Options').content_7 }}
+                                            </p>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <!-- news modal closer start -->
+                                            <div class="news-modal-close-wrapper">
+                                                <div class="the-button inverse-dark">
+                                                    Close
+                                                </div>
+                                            </div><!-- news modal closer end -->
+                                        </div><!-- news modal content end -->
+                                    </div>
+                                </div>
+                            </div><!-- news MORE carousel content end -->
+                        </div><!-- center block end -->
+                    </div><!-- center container end -->
+                </div><!-- news MORE carousel item end -->
+                <div class="news-more-8 panel-right">
+                    <!-- center container start -->
+                    <div class="center-container">
+                        <!-- center block start -->
+                        <div class="center-block">
+                            <!-- news MORE carousel content start -->
+                            <div class="img-fullwidth-wrapper">
+                                <div class="news-content">
+                                    <div class="news-content-inner">
+                                        <!-- news modal content start -->
+                                        <div class="news-modal-content-inner">
+                                            <h2 class="section-subheading section-subheading-about section-subheading-dark">
+                                                <span> 8 </span>
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-dark">
+                                                {{ frappe.get_doc('Website Options').content_title_8 }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <p class="news-modal-txt news-modal-txt-dark">
+                                                {{ frappe.get_doc('Website Options').content_8 }}
+                                            </p>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <!-- news modal closer start -->
+                                            <div class="news-modal-close-wrapper">
+                                                <div class="the-button inverse-dark">
+                                                    Close
+                                                </div>
+                                            </div><!-- news modal closer end -->
+                                        </div><!-- news modal content end -->
+                                    </div>
+                                </div>
+                            </div><!-- news MORE carousel content end -->
+                        </div><!-- center block end -->
+                    </div><!-- center container end -->
+                </div><!-- news MORE carousel item end -->
+            </div><!-- section news end -->
+            <!-- section contact start -->
+
+            <!-- section about start -->
+            <div class="section" id="section4">
+                <!-- section title start -->
+                <div class="section-title section-title-left">
+                    <div class="section-title-heading">
+                        <!-- {{ frappe.get_doc('Website Options').about_title }} -->
+                    </div>
+                </div><!-- section title end -->
+                <!-- container start -->
+                <div class="container-fluid sections">
+                    <!-- row start -->
+                    <div class="row">
+                        <!-- col start -->
+                        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding">
+                            <!-- about left start -->
+                            <div class="slick-about">
+                                <!-- about content wrapper start -->
+                                <div class="about-content-wrapper">
+                                    <!-- about content start -->
+                                    <div class="about-content">
+                                        <div class="about-content-inner">
+                                            
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-light">
+                                                {{ frappe.get_doc('Website Options').why_text }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <div class="about-txt">
+                                                <ul>
+                                                    {% for point in frappe.get_doc('Website Options').why_paragraph.split('\n') %}
+                                                        <li>{{ point.strip() }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!-- about content end -->
+                                </div><!-- about content wrapper end -->
+                            </div><!-- about left end -->
+                        </div><!-- col end -->
+                        <!-- col start -->
+                        <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding">
+                            <!-- about right start -->
+                            <div class="overlay overlay-inverse-dark-70">
+                                <!-- about bg IMG start -->
+                                <div class="about-bg-wrapper">
+                                    <div class="about-bg">
+                                        <img src="{{ frappe.get_doc('Website Options').why_background }}" alt="About Background Image">
+                                    </div> 
+                                </div><!-- about bg IMG end -->
+                            </div><!-- about right end -->
+                        </div><!-- col end -->
+                    </div><!-- row end -->
+                </div><!-- container end -->
+            </div><!-- section about end -->
+
+
+            <div class="section" id="section5">
+                <!-- col start -->
+<div class="col-md-6 col-sm-6 col-sm-push-6 nopadding">
+    <!-- about right start -->
+    <div class="overlay overlay-inverse-dark-70">
+        <!-- about bg IMG start -->
+        <div class="about-bg-wrapper">
+
+            <div class="about-bg">
+                <img src="{{ frappe.get_doc('Website Options').service_background }}" alt="About Background Image">
+            </div>
+        </div><!-- about bg IMG end -->
+    </div><!-- about right end -->
+</div><!-- col end -->
+<!-- col start -->
+<div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding">
+    <!-- about left start -->
+    <div class="slick-about">
+        <!-- about content wrapper start -->
+        <div class="about-content-wrapper">
+            <!-- about content start -->
+            <div class="about-content">
+                <div class="about-content-inner">
+                    <h2>{{ frappe.get_doc('Website Options').table_title }}</h2>
+                    <table>
+                        <tr>
+                            <th>{{ frappe.get_doc('Website Options').table_header_1 }}</th>
+                            <th>{{ frappe.get_doc('Website Options').table_header_2 }}</th>
+                            <th>{{ frappe.get_doc('Website Options').table_header_3 }}</th>
+                        </tr>
+                        <tr>
+                            <td >{{ frappe.get_doc('Website Options').table_row_1}}</td>
+                            <td>{{ frappe.get_doc('Website Options').table_row_2 }}</td>
+                            <td>{{ frappe.get_doc('Website Options').table_row_3 }}</td>
+                        </tr>
+                        <tr>
+                            <td >{{ frappe.get_doc('Website Options').table_row_4 }}</td>
+                            <td>{{ frappe.get_doc('Website Options').table_row_5 }}</td>
+                            <td>{{ frappe.get_doc('Website Options').table_row_6 }}</td>
+                        </tr>
+                        <tr>
+                            <td >{{ frappe.get_doc('Website Options').table_row_7 }}</td>
+                            <td>{{ frappe.get_doc('Website Options').table_row_8 }}</td>
+                            <td>{{ frappe.get_doc('Website Options').table_row_9 }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ frappe.get_doc('Website Options').table_row_10 }}</td>
+                            <td>{{ frappe.get_doc('Website Options').table_row_11 }}</td>
+                            <td>{{ frappe.get_doc('Website Options').table_row_12 }}</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div><!-- about content end -->
+        </div><!-- about content wrapper end -->
+    </div><!-- about left end -->
+</div><!-- col end -->
+
+            </div><!-- section services end -->
+            <div class="section" id="section6">
+                <!-- section title start -->
+                <div class="section-title section-title-left">
+                    <div class="section-title-heading">
+                        <!-- {{ frappe.get_doc('Website Options').about_title }} -->
+                    </div>
+                </div><!-- section title end -->
+                <!-- container start -->
+                <div class="container-fluid sections">
+                    <!-- row start -->
+                    <div class="row">
+                        <!-- col start -->
+                        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding">
+                            <!-- about left start -->
+                            <div class="slick-about">
+                                <!-- about content wrapper start -->
+                                <div class="about-content-wrapper">
+                                    <!-- about content start -->
+                                    <div class="about-content">
+                                        <div class="about-content-inner">
+                                            
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider-half"></div><!-- inner divider end -->
+                                            <h2 class="section-heading section-heading-about section-heading-light">
+                                                {{ frappe.get_doc('Website Options').how_text }}
+                                            </h2>
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <div class="about-txt">
+                                                
+                                                <ul>
+                                                    {% for point in frappe.get_doc('Website Options').how_paragraph.split('\n') %}
+                                                        <li>{{ point.strip() }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+                                    </div><!-- about content end -->
+                                </div><!-- about content wrapper end -->
+                            </div><!-- about left end -->
+                        </div><!-- col end -->
+                        <!-- col start -->
+                        <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding">
+                            <!-- about right start -->
+                            <div class="overlay overlay-inverse-dark-70">
+                                <!-- about bg IMG start -->
+                                <div class="about-bg-wrapper">
+                                    <div class="about-bg">
+                                        <img src="{{ frappe.get_doc('Website Options').how_background }}" alt="About Background Image">
+                                    </div> 
+                                </div><!-- about bg IMG end -->
+                            </div><!-- about right end -->
+                        </div><!-- col end -->
+                    </div><!-- row end -->
+                </div><!-- container end -->
+            </div><!-- section about end -->
+
+            <div class="section" id="section7">
+                <!-- section title start -->
+                <div class="section-title section-title-left">
+                    <div class="section-title-heading" style="font-family: 'Arimo', sans-serif;">
+                        Contact
+                    </div>
+                </div><!-- section title end -->
+                <!-- container start -->
+                <div class="container-fluid sections">
+                    <!-- row start -->
+                    <div class="row">
+                        <!-- col start -->
+                        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding">
+                            <!-- contact left start -->
+                            <div class="contact-container element-color-switch-reverse contact-reset">
+                                <!-- center container start -->
+                                <div class="center-container">
+                                    <!-- center block start -->
+                                    <div class="center-block">
+                                        <!-- contact content start -->
+                                        <div class="contact-content contact-content-light">
+                                            <div class="contact-content-inner">
+                                                <h2 class="section-subheading section-subheading-about section-subheading-dark">
+                                                    <span>Get In Touch</span>
+                                                </h2>
+                                                <!-- inner divider start -->
+                                                <div class="inner-divider-half"></div><!-- inner divider end -->
+                                                <h2 style ="font-size:26px;" class="section-heading section-heading-about section-heading-dark">
+                                                    {{ frappe.get_doc('Website Options').contact_title }}
+                                                </h2>
+                                                <!-- inner divider start -->
+                                                <div class="inner-divider"></div><!-- inner divider end -->
+                                                <div class="contact-txt contact-txt-dark">
+                                                    <p>
+                                                        {{ frappe.get_doc('Website Options').contact_description }}
+                                                    </p>
+                                                </div>
+                                                <!-- inner divider start -->
+                                                <div class="inner-divider"></div><!-- inner divider end -->
+                                                <div class="contact-txt contact-txt-dark">
+                                                    <p>
+                                                        <strong>Email:</strong><br>
+                                                        <span class="contact-info-mail"><a class="link-underline link-underline-dark" href=
+                                                        "mailto:{{ frappe.get_doc('Website Options').contact_mail }}">{{ frappe.get_doc('Website Options').contact_mail }}</a></span>
+                                                    </p>
+                                                    <p>
+                                                        <strong>Phone:</strong><br>
+                                                        <span class="contact-info-mail">{{ frappe.get_doc('Website Options').contact_phone }}</span>
+                                                    </p>
+                                                    <p>
+                                                        <strong>WhatsApp:</strong><br>
+                                                        <span class="contact-info-mail">{{ frappe.get_doc('Website Options').contact_whatsapp }}</span>
+                                                    </p>
+                                                    <!-- inner divider start -->
+                                                    <div class="inner-divider"></div><!-- inner divider end -->
+                                                    <!-- contact form launcher start -->
+                                                    <div class="contact-modal-launcher-wrapper">
+                                                        <div class="the-button contact-modal-launcher">
+                                                            {{ frappe.get_doc('Website Options').contact_button }}
+                                                        </div>
+                                                    </div><!-- contact form launcher end -->
+                                                </div>
+                                            </div>
+                                        </div><!-- contact content end -->
+                                    </div><!-- center block end -->
+                                </div><!-- center container end -->
+                            </div><!-- contact left end -->
+                        </div><!-- col end -->
+                        <!-- col start -->
+                        <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding">
+                            <!-- contact right start -->
+                            <div class="overlay overlay-inverse-dark-35">
+                                <!-- contact bg IMG start -->
+                                <div class="contact-bg-wrapper">
+                                    <div class="contact-bg"></div>
+                                </div><!-- contact bg IMG end -->
+                            </div><!-- contact right end -->
+                        </div><!-- col end -->
+                    </div><!-- row end -->
+                </div><!-- container end -->
+                <!-- contact modal start -->
+                <div class="contact-modal">
+                    <!-- container start -->
+                    <div class="container">
+                        <!-- center container start -->
+                        <div class="center-container-contact-modal">
+                            <!-- center block start -->
+                            <div class="center-block-contact-modal">
+                                <!-- row start -->
+                                <div class="row">
+                                    <!-- col start -->
+                                    <div class="col-lg-12">
+                                        <!-- contact modal content start -->
+                                        <div class="contact-content-inner-modal">
+                                            <!-- contact form start -->
+                                            <div id="contact-form">
+                                                <form action="contact.php" id="form" method="post" name="send">
+                                                    <!-- col start -->
+                                                    <div class="col-sm-12 col-md-12 col-lg-4">
+                                                        <input class="requiredField name" id="name" name="name" placeholder="Name" type="text">
+                                                    </div><!-- col end -->
+                                                    <!-- col start -->
+                                                    <div class="col-sm-12 col-md-12 col-lg-4">
+                                                        <input class="requiredField email" id="email" name="email" placeholder="Email" type="text">
+                                                    </div><!-- col end -->
+                                                    <!-- col start -->
+                                                    <div class="col-sm-12 col-md-12 col-lg-4">
+                                                        <input class="requiredField subject" id="subject" name="subject" placeholder="Subject" type="text">
+                                                    </div><!-- col end -->
+                                                    <div class="make-space">
+                                                        <textarea class="requiredField message" id="message" name="message" placeholder="Message"></textarea>
+                                                    </div>
+                                                    <!-- contact form submit button start -->
+                                                    <div class="contact-form-submit-wrapper">
+                                                        <button class="the-button the-button-light" id="submit" type="submit"><span>Submit</span></button>
+                                                    </div><!-- contact form submit button end -->
+                                                </form>
+                                            </div><!-- contact form end -->
+                                            <!-- inner divider start -->
+                                            <div class="inner-divider"></div><!-- inner divider end -->
+                                            <!-- contact form closer start -->
+                                            <div class="contact-modal-closer">
+                                                <span class="ion-close"></span>
+                                            </div><!-- contact form closer end -->
+                                        </div><!-- contact modal content end -->
+                                    </div><!-- col end -->
+                                </div><!-- row end -->
+                            </div><!-- center block end -->
+                        </div><!-- center container end -->
+                    </div><!-- container end -->
+                </div><!-- contact modal end -->
+            </div><!-- section contact end -->
+        </div><!-- fullPage end -->
+        <!-- scripts start -->
+        <script src="/assets/sbs_theme/new_theme/js/plugins.js">
+        </script> 
+        <script src="/assets/sbs_theme/new_theme/js/wylex.js">
+        </script><!-- scripts end -->
+    </body>
+</html>

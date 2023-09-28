@@ -1,0 +1,153 @@
+{% extends 'templates/butler_base.html' %}
+
+{% block content %}
+
+<body>
+
+	<div class="mry-app">
+
+		<!-- preloader -->
+		<div class="mry-preloader mry-active">
+			<div class="mry-preloader-content">
+				<img class="mry-logo mry-mb-20" src="/assets/sbs_theme/new_theme/img/light/logo.svg" alt="Mireya">
+				<div class="mry-loader-bar">
+					<div class="mry-loader"></div>
+				</div>
+				<div class="mry-label">Please wait</div>
+			</div>
+		</div>
+		<!-- preloader end -->
+
+		<!-- cursor -->
+		<div class="mry-magic-cursor">
+			<div class="mry-ball">
+				<div class="mry-loader">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50"
+						style="enable-background:new 0 0 50 50;" xml:space="preserve">
+						<path d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+							<animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite" />
+						</path>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<!-- cursor end -->
+
+		
+
+		<div  class="transition-fade">
+			<div class="mry-content-frame" id="scroll">
+				<canvas class="mry-dots"></canvas>
+
+				<div class="swiper-container mry-main-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+
+							<!-- project -->
+							<div class="mry-project-slider-item">
+								<div class="mry-project-frame mry-project-half">
+									<div class="mry-cover-frame">
+										<img class="mry-project-cover mry-position-right" src="/assets/sbs_theme/new_theme/img/light/projects/prjct-1/fs/1.jpg" alt="Project" data-swiper-parallax="500"
+											data-swiper-parallax-scale="1.4">
+										<div class="mry-cover-overlay"></div>
+										<div class="mry-loading-curtain"></div>
+									</div>
+									<div class="mry-main-title-frame">
+										<div class="container">
+											<div class="mry-main-title" data-swiper-parallax-x="30%" data-swiper-parallax-scale=".7" data-swiper-parallax-opacity="0"
+												data-swiper-parallax-duration="1000">
+												<div class="mry-subtitle mry-mb-20">Interior design</div>
+												<h1 class="mry-mb-30">Little Cottage<br><span class="mry-border-text">Сoncept</span></h1>
+												<div class="mry-text mry-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>Adipisci distinctio iure, rerum non fugit.</div>
+												<a class="mry-btn mry-default-link mry-anima-link" href="project.html">Open Case</a>
+												<a class="mry-btn-text mry-default-link mry-anima-link" href="portfolio-grid-1.html">All Projects</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- project end -->
+
+						</div>
+						<div class="swiper-slide">
+
+							<!-- project -->
+							<div class="mry-project-slider-item">
+								<div class="mry-project-frame mry-project-half">
+									<div class="mry-cover-frame">
+										<img class="mry-project-cover" src="/assets/sbs_theme/new_theme/img/light/projects/prjct-2/fs/1.jpg" alt="Project" data-swiper-parallax="500" data-swiper-parallax-scale="1.4">
+										<div class="mry-cover-overlay"></div>
+									</div>
+									<div class="mry-main-title-frame">
+										<div class="container">
+											<div class="mry-main-title" data-swiper-parallax-x="30%" data-swiper-parallax-scale=".7" data-swiper-parallax-opacity="0"
+												data-swiper-parallax-duration="1000">
+												<div class="mry-subtitle mry-mb-20">Architecture</div>
+												<h1 class="mry-mb-30">Compact House<br><span class="mry-border-text">Project</span><span class="mry-animation-el"></span></h1>
+												<div class="mry-text mry-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>Adipisci distinctio iure, rerum non fugit.</div>
+												<a class="mry-btn mry-default-link mry-anima-link" href="project.html">Open Case</a>
+												<a class="mry-btn-text mry-default-link mry-anima-link" href="portfolio-grid-1.html">All Projects</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- project end -->
+
+						</div>
+						<div class="swiper-slide">
+
+							<!-- project -->
+							<div class="mry-project-slider-item">
+								<div class="mry-project-frame mry-project-half">
+									<div class="mry-cover-frame">
+										<img class="mry-project-cover" src="/assets/sbs_theme/new_theme/img/light/projects/prjct-3/fs/1.jpg" alt="Project" data-swiper-parallax="500" data-swiper-parallax-scale="1.4">
+										<div class="mry-cover-overlay"></div>
+									</div>
+									<div class="mry-main-title-frame">
+										<div class="container">
+											<div class="mry-main-title" data-swiper-parallax-x="30%" data-swiper-parallax-scale=".7" data-swiper-parallax-opacity="0"
+												data-swiper-parallax-duration="1000">
+												<div class="mry-subtitle mry-mb-20">Interior design</div>
+												<h1 class="mry-mb-30">Greenwell Yards<br><span class="mry-border-text">Country house</span><span class="mry-animation-el"></span></h1>
+												<div class="mry-text mry-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>Adipisci distinctio iure, rerum non fugit.</div>
+												<a class="mry-btn mry-default-link mry-anima-link" href="project.html">Open Case</a>
+												<a class="mry-btn-text mry-default-link mry-anima-link" href="portfolio-grid-1.html">All Projects</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- project end -->
+
+						</div>
+					</div>
+				</div>
+
+				<div class="mry-slider-pagination-frame">
+					<div class="mry-slider-pagination"></div>
+				</div>
+
+				<div class="mry-slider-nav-panel">
+					<!-- <div class="container">
+						<div class="mry-slider-progress-bar-frame">
+							<div class="mry-slider-progress-bar">
+								<div class="mry-progress"></div>
+							</div>
+						</div>
+					</div> -->
+
+					<!-- <div class="mry-slider-arrows">
+						<div class="mry-label">Slider Navigation</div>
+						<div class="mry-button-prev mry-magnetic-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-left"></i></span></div>
+						<div class="mry-button-next mry-magnetic-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+{% endblock %}
+
