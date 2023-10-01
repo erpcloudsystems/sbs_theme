@@ -1,0 +1,865 @@
+{
+ "_liked_by": "[\"m.nasr@erpcloud.systems\"]",
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-27 17:07:52.917769",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "home_page_section",
+  "logo",
+  "title",
+  "header",
+  "credits",
+  "home_back_ground",
+  "home_page_background_mobile",
+  "twitter",
+  "facebook",
+  "youtube",
+  "linkedin",
+  "instagram",
+  "pinterest",
+  "about_section",
+  "about_title",
+  "about_button",
+  "about_background",
+  "about_background_mobile",
+  "about_small_text",
+  "about_text",
+  "about_paragraph",
+  "about_small_text_2",
+  "about_text_2",
+  "about_paragraph_2",
+  "about_small_text_3",
+  "about_text_3",
+  "about_paragraph_3",
+  "about_small_text_4",
+  "about_text_4",
+  "about_paragraph_4",
+  "about_small_text_5",
+  "about_text_5",
+  "about_paragraph_5",
+  "about_stats_1",
+  "about_stats_percent_1",
+  "about_stats_2",
+  "about_stats_percent_2",
+  "about_stats_3",
+  "about_stats_percent_3",
+  "about_stats_4",
+  "about_stats_percent_4",
+  "services_section",
+  "services_title",
+  "service_background",
+  "service_background_mobile",
+  "services_button",
+  "services_left_small_text",
+  "services_left_text",
+  "services_left_paragraph",
+  "works_section_section",
+  "discover_title",
+  "service_description_1",
+  "service_small_description_1",
+  "discover_img1_background",
+  "discover_img1_mobile",
+  "service_description_2",
+  "service_small_description_2",
+  "discover_img2_background",
+  "discover_img2_mobile",
+  "service_description_3",
+  "service_small_description_3",
+  "discover_img3_background",
+  "discover_img3_mobile",
+  "service_description_4",
+  "service_small_description_4",
+  "discover_img4_background",
+  "discover_img4_mobile",
+  "service_description_5",
+  "service_small_description_5",
+  "discover_img5_background",
+  "discover_img5_mobile",
+  "service_description_6",
+  "service_small_description_6",
+  "discover_img6_background",
+  "discover_img6_mobile",
+  "service_description_7",
+  "service_small_description_7",
+  "discover_img7_background",
+  "discover_img7_mobile",
+  "service_description_8",
+  "service_small_description_8",
+  "discover_img8_background",
+  "discover_img8_mobile",
+  "content_title_1",
+  "content_1",
+  "content_title_2",
+  "content_2",
+  "content_title_3",
+  "content_3",
+  "content_title_4",
+  "content_4",
+  "content_title_5",
+  "content_5",
+  "content_title_6",
+  "content_6",
+  "content_title_7",
+  "content_7",
+  "content_title_8",
+  "content_8",
+  "contact_section",
+  "contact_title",
+  "contact_background",
+  "contact_background_mobile",
+  "contact_description",
+  "contact_mail",
+  "contact_phone",
+  "contact_whatsapp",
+  "contact_button",
+  "why_butler_section",
+  "why_text",
+  "why_title",
+  "why_paragraph",
+  "why_background",
+  "why_background_mobile",
+  "how_butler_cares_section",
+  "how_text",
+  "how_paragraph",
+  "how_background",
+  "how_background_mobile",
+  "info_table_section",
+  "table_title",
+  "info_background",
+  "info_background_mobile",
+  "table_header_1",
+  "table_header_2",
+  "table_header_3",
+  "table_row_1",
+  "table_row_2",
+  "table_row_3",
+  "table_row_4",
+  "table_row_5",
+  "table_row_6",
+  "table_row_7",
+  "table_row_8",
+  "table_row_9",
+  "table_row_10",
+  "table_row_11",
+  "table_row_12"
+ ],
+ "fields": [
+  {
+   "fieldname": "home_page_section",
+   "fieldtype": "Section Break",
+   "label": "Home Page"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "header",
+   "fieldtype": "Data",
+   "label": "Header"
+  },
+  {
+   "fieldname": "credits",
+   "fieldtype": "Data",
+   "label": "Credits"
+  },
+  {
+   "fieldname": "home_back_ground",
+   "fieldtype": "Attach Image",
+   "label": "Home Background"
+  },
+  {
+   "fieldname": "home_page_background_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Home Page Background Mobile"
+  },
+  {
+   "fieldname": "twitter",
+   "fieldtype": "Data",
+   "label": "Twitter"
+  },
+  {
+   "fieldname": "facebook",
+   "fieldtype": "Data",
+   "label": "Facebook"
+  },
+  {
+   "fieldname": "youtube",
+   "fieldtype": "Data",
+   "label": "Youtube"
+  },
+  {
+   "fieldname": "linkedin",
+   "fieldtype": "Data",
+   "label": "LinkedIn"
+  },
+  {
+   "fieldname": "instagram",
+   "fieldtype": "Data",
+   "label": "Instagram"
+  },
+  {
+   "fieldname": "pinterest",
+   "fieldtype": "Data",
+   "label": "Pinterest"
+  },
+  {
+   "fieldname": "about_section",
+   "fieldtype": "Section Break",
+   "label": "About"
+  },
+  {
+   "fieldname": "about_title",
+   "fieldtype": "Data",
+   "label": "About Title"
+  },
+  {
+   "fieldname": "about_button",
+   "fieldtype": "Data",
+   "label": "About Button"
+  },
+  {
+   "fieldname": "about_background",
+   "fieldtype": "Attach Image",
+   "label": "About Background"
+  },
+  {
+   "fieldname": "about_background_mobile",
+   "fieldtype": "Attach Image",
+   "label": "About Background Mobile"
+  },
+  {
+   "fieldname": "about_small_text",
+   "fieldtype": "Data",
+   "label": "About Small Text"
+  },
+  {
+   "fieldname": "about_text",
+   "fieldtype": "Data",
+   "label": "About Text"
+  },
+  {
+   "fieldname": "about_paragraph",
+   "fieldtype": "Data",
+   "label": "About Paragraph"
+  },
+  {
+   "fieldname": "about_small_text_2",
+   "fieldtype": "Data",
+   "label": "About Small Text 2"
+  },
+  {
+   "fieldname": "about_text_2",
+   "fieldtype": "Data",
+   "label": "About Text 2"
+  },
+  {
+   "fieldname": "about_paragraph_2",
+   "fieldtype": "Data",
+   "label": "About Paragraph 2"
+  },
+  {
+   "fieldname": "about_small_text_3",
+   "fieldtype": "Data",
+   "label": "About Small Text 3"
+  },
+  {
+   "fieldname": "about_text_3",
+   "fieldtype": "Data",
+   "label": "About Text 3"
+  },
+  {
+   "fieldname": "about_paragraph_3",
+   "fieldtype": "Data",
+   "label": "About Paragraph3"
+  },
+  {
+   "fieldname": "about_small_text_4",
+   "fieldtype": "Data",
+   "label": "About Small Text 4"
+  },
+  {
+   "fieldname": "about_text_4",
+   "fieldtype": "Data",
+   "label": "About Text 4"
+  },
+  {
+   "fieldname": "about_paragraph_4",
+   "fieldtype": "Data",
+   "label": "About Paragraph 4"
+  },
+  {
+   "fieldname": "about_small_text_5",
+   "fieldtype": "Data",
+   "label": "About Small Text 5"
+  },
+  {
+   "fieldname": "about_text_5",
+   "fieldtype": "Data",
+   "label": "About Text 5"
+  },
+  {
+   "fieldname": "about_paragraph_5",
+   "fieldtype": "Data",
+   "label": "About Paragraph 5"
+  },
+  {
+   "fieldname": "about_stats_1",
+   "fieldtype": "Data",
+   "label": "About Stats 1"
+  },
+  {
+   "fieldname": "about_stats_percent_1",
+   "fieldtype": "Data",
+   "label": "About Stats Percent 1"
+  },
+  {
+   "fieldname": "about_stats_2",
+   "fieldtype": "Data",
+   "label": "About Stats 2"
+  },
+  {
+   "fieldname": "about_stats_percent_2",
+   "fieldtype": "Data",
+   "label": "About Stats Percent 2"
+  },
+  {
+   "fieldname": "about_stats_3",
+   "fieldtype": "Data",
+   "label": "About Stats 3"
+  },
+  {
+   "fieldname": "about_stats_percent_3",
+   "fieldtype": "Data",
+   "label": "About Stats Percent 3"
+  },
+  {
+   "fieldname": "about_stats_4",
+   "fieldtype": "Data",
+   "label": "About Stats 4"
+  },
+  {
+   "fieldname": "about_stats_percent_4",
+   "fieldtype": "Data",
+   "label": "About Stats Percent 4"
+  },
+  {
+   "fieldname": "services_section",
+   "fieldtype": "Section Break",
+   "label": "Services"
+  },
+  {
+   "fieldname": "services_title",
+   "fieldtype": "Data",
+   "label": "Services Title"
+  },
+  {
+   "fieldname": "service_background",
+   "fieldtype": "Attach Image",
+   "label": "Service Background"
+  },
+  {
+   "fieldname": "service_background_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Service Background Mobile"
+  },
+  {
+   "fieldname": "services_button",
+   "fieldtype": "Data",
+   "label": "Services Button"
+  },
+  {
+   "fieldname": "services_left_small_text",
+   "fieldtype": "Data",
+   "label": "Services Small Text"
+  },
+  {
+   "fieldname": "services_left_text",
+   "fieldtype": "Data",
+   "label": "Services Text"
+  },
+  {
+   "fieldname": "services_left_paragraph",
+   "fieldtype": "Data",
+   "label": "Services Paragraph"
+  },
+  {
+   "fieldname": "works_section_section",
+   "fieldtype": "Section Break",
+   "label": "Discover"
+  },
+  {
+   "fieldname": "discover_title",
+   "fieldtype": "Data",
+   "label": "Discover Title"
+  },
+  {
+   "fieldname": "service_description_1",
+   "fieldtype": "Data",
+   "label": "Service Description 1"
+  },
+  {
+   "fieldname": "service_small_description_1",
+   "fieldtype": "Data",
+   "label": "Service Small Description 1"
+  },
+  {
+   "fieldname": "discover_img1_background",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img1 Background"
+  },
+  {
+   "fieldname": "discover_img1_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img1 Mobile"
+  },
+  {
+   "fieldname": "service_description_2",
+   "fieldtype": "Data",
+   "label": "Service Description 2"
+  },
+  {
+   "fieldname": "service_small_description_2",
+   "fieldtype": "Data",
+   "label": "Service Small Description 2"
+  },
+  {
+   "fieldname": "discover_img2_background",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img2 Background"
+  },
+  {
+   "fieldname": "discover_img2_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img2 Mobile"
+  },
+  {
+   "fieldname": "service_description_3",
+   "fieldtype": "Data",
+   "label": "Service Description 3"
+  },
+  {
+   "fieldname": "service_small_description_3",
+   "fieldtype": "Data",
+   "label": "Service Small Description 3"
+  },
+  {
+   "fieldname": "discover_img3_background",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img3 Background"
+  },
+  {
+   "fieldname": "discover_img3_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img3 Mobile"
+  },
+  {
+   "fieldname": "service_description_4",
+   "fieldtype": "Data",
+   "label": "Service Description 4"
+  },
+  {
+   "fieldname": "service_small_description_4",
+   "fieldtype": "Data",
+   "label": "Service Small Description 4"
+  },
+  {
+   "fieldname": "discover_img4_background",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img4 Background"
+  },
+  {
+   "fieldname": "discover_img4_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img4 Mobile"
+  },
+  {
+   "fieldname": "service_description_5",
+   "fieldtype": "Data",
+   "label": "Service Description 5"
+  },
+  {
+   "fieldname": "service_small_description_5",
+   "fieldtype": "Data",
+   "label": "Service Small Description 5"
+  },
+  {
+   "fieldname": "discover_img5_background",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img5 Background"
+  },
+  {
+   "fieldname": "discover_img5_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img5 Mobile"
+  },
+  {
+   "fieldname": "service_description_6",
+   "fieldtype": "Data",
+   "label": "Service Description 6"
+  },
+  {
+   "fieldname": "service_small_description_6",
+   "fieldtype": "Data",
+   "label": "Service Small Description 6"
+  },
+  {
+   "fieldname": "discover_img6_background",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img6 Background"
+  },
+  {
+   "fieldname": "discover_img6_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img6 Mobile"
+  },
+  {
+   "fieldname": "service_description_7",
+   "fieldtype": "Data",
+   "label": "Service Description 7"
+  },
+  {
+   "fieldname": "service_small_description_7",
+   "fieldtype": "Data",
+   "label": "Service Small Description 7"
+  },
+  {
+   "fieldname": "discover_img7_background",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img7 Background"
+  },
+  {
+   "fieldname": "discover_img7_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img7 Mobile"
+  },
+  {
+   "fieldname": "service_description_8",
+   "fieldtype": "Data",
+   "label": "Service Description 8"
+  },
+  {
+   "fieldname": "service_small_description_8",
+   "fieldtype": "Data",
+   "label": "Service Small Description 8"
+  },
+  {
+   "fieldname": "discover_img8_background",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img8 Background"
+  },
+  {
+   "fieldname": "discover_img8_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Discover Img8 Mobile"
+  },
+  {
+   "fieldname": "content_title_1",
+   "fieldtype": "Data",
+   "label": "Content Title 1"
+  },
+  {
+   "fieldname": "content_1",
+   "fieldtype": "Data",
+   "label": "Content 1"
+  },
+  {
+   "fieldname": "content_title_2",
+   "fieldtype": "Data",
+   "label": "Content Title 2"
+  },
+  {
+   "fieldname": "content_2",
+   "fieldtype": "Data",
+   "label": "Content 2"
+  },
+  {
+   "fieldname": "content_title_3",
+   "fieldtype": "Data",
+   "label": "Content Title 3"
+  },
+  {
+   "fieldname": "content_3",
+   "fieldtype": "Data",
+   "label": "Content 3"
+  },
+  {
+   "fieldname": "content_title_4",
+   "fieldtype": "Data",
+   "label": "Content Title 4"
+  },
+  {
+   "fieldname": "content_4",
+   "fieldtype": "Data",
+   "label": "Content 4"
+  },
+  {
+   "fieldname": "content_title_5",
+   "fieldtype": "Data",
+   "label": "Content Title 5"
+  },
+  {
+   "fieldname": "content_5",
+   "fieldtype": "Data",
+   "label": "Content 5"
+  },
+  {
+   "fieldname": "content_title_6",
+   "fieldtype": "Data",
+   "label": "Content Title 6"
+  },
+  {
+   "fieldname": "content_6",
+   "fieldtype": "Data",
+   "label": "Content 6"
+  },
+  {
+   "fieldname": "content_title_7",
+   "fieldtype": "Data",
+   "label": "Content Title 7"
+  },
+  {
+   "fieldname": "content_7",
+   "fieldtype": "Data",
+   "label": "Content 7"
+  },
+  {
+   "fieldname": "content_title_8",
+   "fieldtype": "Data",
+   "label": "Content Title 8"
+  },
+  {
+   "fieldname": "content_8",
+   "fieldtype": "Data",
+   "label": "Content 8"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact "
+  },
+  {
+   "fieldname": "contact_title",
+   "fieldtype": "Data",
+   "label": "Contact Title"
+  },
+  {
+   "fieldname": "contact_background",
+   "fieldtype": "Attach Image",
+   "label": "Contact Background"
+  },
+  {
+   "fieldname": "contact_background_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Contact Background Mobile"
+  },
+  {
+   "fieldname": "contact_description",
+   "fieldtype": "Data",
+   "label": "Contact Description"
+  },
+  {
+   "fieldname": "contact_mail",
+   "fieldtype": "Data",
+   "label": "Contact Mail"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "contact_whatsapp",
+   "fieldtype": "Data",
+   "label": "Contact Whatsapp"
+  },
+  {
+   "fieldname": "contact_button",
+   "fieldtype": "Data",
+   "label": "Contact Button"
+  },
+  {
+   "fieldname": "why_butler_section",
+   "fieldtype": "Section Break",
+   "label": "Why butler"
+  },
+  {
+   "fieldname": "why_text",
+   "fieldtype": "Data",
+   "label": "Why Text"
+  },
+  {
+   "fieldname": "why_title",
+   "fieldtype": "Data",
+   "label": "Why Title"
+  },
+  {
+   "fieldname": "why_paragraph",
+   "fieldtype": "Text",
+   "label": "Why Paragraph"
+  },
+  {
+   "fieldname": "why_background",
+   "fieldtype": "Attach Image",
+   "label": "Why Background"
+  },
+  {
+   "fieldname": "why_background_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Why Background Mobile"
+  },
+  {
+   "fieldname": "how_butler_cares_section",
+   "fieldtype": "Section Break",
+   "label": "How Butler Cares"
+  },
+  {
+   "fieldname": "how_text",
+   "fieldtype": "Data",
+   "label": "How Text"
+  },
+  {
+   "fieldname": "how_paragraph",
+   "fieldtype": "Text",
+   "label": "How Paragraph"
+  },
+  {
+   "fieldname": "how_background",
+   "fieldtype": "Attach Image",
+   "label": "How Background"
+  },
+  {
+   "fieldname": "how_background_mobile",
+   "fieldtype": "Attach Image",
+   "label": "How Background Mobile"
+  },
+  {
+   "fieldname": "info_table_section",
+   "fieldtype": "Section Break",
+   "label": "Info (table)"
+  },
+  {
+   "fieldname": "table_title",
+   "fieldtype": "Data",
+   "label": "Table Title"
+  },
+  {
+   "fieldname": "info_background",
+   "fieldtype": "Attach Image",
+   "label": "Info Background"
+  },
+  {
+   "fieldname": "info_background_mobile",
+   "fieldtype": "Attach Image",
+   "label": "Info Background Mobile"
+  },
+  {
+   "fieldname": "table_header_1",
+   "fieldtype": "Data",
+   "label": "Table Header 1"
+  },
+  {
+   "fieldname": "table_header_2",
+   "fieldtype": "Data",
+   "label": "Table Header 2"
+  },
+  {
+   "fieldname": "table_header_3",
+   "fieldtype": "Data",
+   "label": "Table Header 3"
+  },
+  {
+   "fieldname": "table_row_1",
+   "fieldtype": "Data",
+   "label": "Table Row 1"
+  },
+  {
+   "fieldname": "table_row_2",
+   "fieldtype": "Data",
+   "label": "Table Row 2"
+  },
+  {
+   "fieldname": "table_row_3",
+   "fieldtype": "Data",
+   "label": "Table Row 3"
+  },
+  {
+   "fieldname": "table_row_4",
+   "fieldtype": "Data",
+   "label": "Table Row 4"
+  },
+  {
+   "fieldname": "table_row_5",
+   "fieldtype": "Data",
+   "label": "Table Row 5"
+  },
+  {
+   "fieldname": "table_row_6",
+   "fieldtype": "Data",
+   "label": "Table Row 6"
+  },
+  {
+   "fieldname": "table_row_7",
+   "fieldtype": "Data",
+   "label": "Table Row 7"
+  },
+  {
+   "fieldname": "table_row_8",
+   "fieldtype": "Data",
+   "label": "Table Row 8"
+  },
+  {
+   "fieldname": "table_row_9",
+   "fieldtype": "Data",
+   "label": "Table Row 9"
+  },
+  {
+   "fieldname": "table_row_10",
+   "fieldtype": "Data",
+   "label": "Table Row 10"
+  },
+  {
+   "fieldname": "table_row_11",
+   "fieldtype": "Data",
+   "label": "Table Row 11"
+  },
+  {
+   "fieldname": "table_row_12",
+   "fieldtype": "Data",
+   "label": "Table Row 12"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-10-01 13:11:46.766993",
+ "modified_by": "Administrator",
+ "module": "Sbs Theme",
+ "name": "Website Options",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
