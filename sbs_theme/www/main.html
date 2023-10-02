@@ -618,6 +618,7 @@ body {
                     <p>
                       {{ frappe.get_doc('Website Options').contact_description }}
                     </p>
+
                     <a class="button button-white" href="#" data-toggle="modal" data-target="#appointment">{{ frappe.get_doc('Website Options').contact_button }}</a>
                     <div style="padding: 2%;"></div>
                     <hr><h4>OR</h4> <hr>
@@ -628,12 +629,76 @@ body {
                     <strong>Phone</strong><br>
                     <span class="contact-info-mail">{{ frappe.get_doc('Website Options').contact_phone }}</span> <br>
                     <strong>WhatsApp</strong><br>
-                    <span class="contact-info-mail">{{ frappe.get_doc('Website Options').contact_whatsapp }}</span>
+                    <span class="contact-info-mail">{{ frappe.get_doc('Website Options').contact_whatsapp }}</span><br>
+                    <strong>Adress</strong><br>
+                    <span class="contact-info-mail">{{ frappe.get_doc('Website Options').addres }}</span><br>
+                    <strong>Location</strong><br>
+                     <span class="contact-info-mail">{{ frappe.get_doc('Website Options').location }}</span>
+                
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+
+          <!-- Terms & Conditions-->
+
+          <div class="swiper-slide context-dark" data-title="&lt;span class=&quot;swiper-pagination-title&quot;&gt;Terms & Conditions&lt;/span&gt;&lt;span class=&quot;fa-phone swiper-pagination-icon&quot;&gt;&lt;/span&gt;">
+            <div class="parallax-scene container-screen">
+              <div class="about-bg-wrapper">
+                <div class="about-bg">
+                    <img src="" alt="how Background Image" id="responsive-image30">
+                    <script>
+                        function updateImage() {
+                            var imageElement = document.getElementById('responsive-image30');
+                            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                            var mobileImageURL = "{{ frappe.get_doc('Website Options').terms_photo}}";
+                            var desktopImageURL = "{{ frappe.get_doc('Website Options').terms_photo }}";
+                
+                            if (screenWidth <= 700 && mobileImageURL) {
+                                imageElement.src = mobileImageURL;
+                            } else if (desktopImageURL) {
+                                imageElement.src = desktopImageURL;
+                            }
+                        }
+                
+                        // Call the function when the page loads and when the window resizes
+                        window.addEventListener('load', updateImage);
+                        window.addEventListener('resize', updateImage);
+                
+                        // Initial update
+                        updateImage();
+                    </script>
+                </div> 
+            </div><!-- about bg IMG end -->
+            </div>
+            <div class="container">
+              <div class="row text-md-left">
+                <div class="col-md-7 col-xl-8">
+                  <div class="offer-box">
+                    
+                  </div>
+                </div>
+                <div class="col-md-5 col-xl-4">
+                  <div class="content-box bg-secondary index-1 pl-xxl-5 pr-xxl-5" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0">
+                    <h4>{{ frappe.get_doc('Website Options').terms_and_conditions }}</h4>
+                    <div style="max-height: 300px; overflow-y: auto;">
+                      <ul>
+                        {% for point in frappe.get_doc('Website Options').terms_paragraph.split('\n') %}
+                        <li>{{ point.strip() }}</li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
 
         </div>
         <!-- Swiper Pagination-->

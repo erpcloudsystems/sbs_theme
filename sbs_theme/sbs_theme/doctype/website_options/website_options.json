@@ -115,6 +115,8 @@
   "contact_mail",
   "contact_phone",
   "contact_whatsapp",
+  "addres",
+  "location",
   "contact_button",
   "why_butler_section",
   "why_text",
@@ -145,7 +147,10 @@
   "table_row_9",
   "table_row_10",
   "table_row_11",
-  "table_row_12"
+  "table_row_12",
+  "terms_and_conditions",
+  "terms_paragraph",
+  "terms_photo"
  ],
  "fields": [
   {
@@ -837,12 +842,37 @@
    "fieldname": "table_row_12",
    "fieldtype": "Data",
    "label": "Table Row 12"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Data",
+   "label": "Terms And Conditions"
+  },
+  {
+   "fieldname": "terms_paragraph",
+   "fieldtype": "Small Text",
+   "label": "Terms Paragraph "
+  },
+  {
+   "fieldname": "terms_photo",
+   "fieldtype": "Attach Image",
+   "label": "Terms Photo"
+  },
+  {
+   "fieldname": "addres",
+   "fieldtype": "Data",
+   "label": "Addres"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-01 13:11:46.766993",
+ "modified": "2023-10-02 13:11:15.206792",
  "modified_by": "Administrator",
  "module": "Sbs Theme",
  "name": "Website Options",
