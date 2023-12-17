@@ -27,6 +27,7 @@ def onload(doc, method=None):
 
 @frappe.whitelist()
 def before_validate(doc, method=None):
+	
 	pass
 
 
