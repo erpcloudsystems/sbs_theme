@@ -37,6 +37,19 @@ doc_events = {
 		"before_cancel": "sbs_theme.doctype_triggers.accounting.payment_entry.payment_entry.before_cancel",
 		"on_update": "sbs_theme.doctype_triggers.accounting.payment_entry.payment_entry.on_update",
 	},
+	"Product Bundle": {
+		"before_insert": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.before_insert",
+		"after_insert": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.after_insert",
+		"onload": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.onload",
+		"before_validate": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.before_validate",
+		"validate": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.validate",
+		"on_submit": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.on_submit",
+		"on_cancel": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.on_cancel",
+		"on_update_after_submit": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.on_update_after_submit",
+		"before_save": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.before_save",
+		"before_cancel": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.before_cancel",
+		"on_update": "sbs_theme.doctype_triggers.selling.product_bundle.product_bundle.on_update",
+	},
 	"Purchase Invoice": {
 		"before_insert": "sbs_theme.doctype_triggers.accounting.purchase_invoice.purchase_invoice.before_insert",
 		"after_insert": "sbs_theme.doctype_triggers.accounting.purchase_invoice.purchase_invoice.after_insert",
@@ -869,3 +882,6 @@ user_data_fields = [
 # 	"sbs_theme.auth.validate"
 # ]
 
+import erpnext.crm.doctype.appointment_booking_settings.appointment_booking_settings as sbs_crm
+import sbs_theme.overrides as _sbs_save
+sbs_crm.AppointmentBookingSettings.save = _sbs_save.save

@@ -71,6 +71,7 @@ def get_appointment_slots(date, timezone):
 			converted_timeslots.append(dict(time=converted_timeslot, availability=True))
 		else:
 			converted_timeslots.append(dict(time=converted_timeslot, availability=False))
+
 	date_required = datetime.datetime.strptime(date + " 00:00:00", format_string).date()
 	converted_timeslots = filter_timeslots(date_required, converted_timeslots)
 	return converted_timeslots
@@ -141,6 +142,7 @@ def convert_to_system_timezone(guest_tz, datetimeobject):
 
 
 def check_availabilty(timeslot, settings):
+	frappe.msgprint(f"hello {settings.number_of_agents}")
 	return frappe.db.count("Appointment", {"scheduled_time": timeslot}) < settings.number_of_agents
 
 
