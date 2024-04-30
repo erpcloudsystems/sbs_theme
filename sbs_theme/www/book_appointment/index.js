@@ -189,10 +189,17 @@ function setup_search_params() {
     let search_params = new URLSearchParams(window.location.search);
     let customer_name = search_params.get("name")
     let customer_email = search_params.get("email")
+    let company_name = search_params.get("company_name")
+
     let detail = search_params.get("details")
     if (customer_name) {
         let name_input = document.getElementById("customer_name");
         name_input.value = customer_name;
+        name_input.disabled = true;
+    }
+    if (company_name) {
+        let name_input = document.getElementById("company_name");
+        name_input.value = company_name;
         name_input.disabled = true;
     }
     if(customer_email) {
