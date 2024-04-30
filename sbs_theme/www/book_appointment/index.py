@@ -142,7 +142,7 @@ def convert_to_system_timezone(guest_tz, datetimeobject):
 
 
 def check_availabilty(timeslot, settings):
-	frappe.msgprint(f"hello {settings.number_of_agents}")
+	# frappe.msgprint(f"hello {settings.number_of_agents}")
 	return frappe.db.count("Appointment", {"scheduled_time": timeslot}) < settings.number_of_agents
 
 
