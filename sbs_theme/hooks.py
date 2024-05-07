@@ -790,9 +790,9 @@ web_include_css = "/assets/js/web_ecs.min.css"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+    "Appointment": "sbs_theme.overrides.CustomAppointment",
+}
 
 # Document Events
 # ---------------
@@ -882,6 +882,8 @@ user_data_fields = [
 # 	"sbs_theme.auth.validate"
 # ]
 
-import erpnext.crm.doctype.appointment_booking_settings.appointment_booking_settings as sbs_crm
-import sbs_theme.overrides as _sbs_save
-sbs_crm.AppointmentBookingSettings.save = _sbs_save.save
+# import erpnext.crm.doctype.appointment_booking_settings.appointment_booking_settings as sbs_crm
+# import sbs_theme.overrides as _sbs_save
+# sbs_crm.AppointmentBookingSettings.save = _sbs_save.save
+
+
