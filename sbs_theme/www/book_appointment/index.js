@@ -217,11 +217,11 @@ async function submit() {
     let button = document.getElementById('submit-button');
     button.disabled = true;
     let form = document.querySelector('#customer-form');
-    if (!form.checkValidity()) {
-        form.reportValidity();
-        button.disabled = false;
-        return;
-    }
+    // if (!form.checkValidity()) {
+    //     form.reportValidity();
+    //     button.disabled = false;
+    //     return;
+    // }
     let contact = get_form_data();
     let appointment =  frappe.call({
         method: 'sbs_theme.www.book_appointment.index.create_appointment',
@@ -232,11 +232,16 @@ async function submit() {
             'tz':window.selected_timezone
         },
         callback: (response)=>{
-            if (response.message.status == "Unverified") {
-                frappe.show_alert(__("Please check your email to confirm the appointment"))
-            } else {
-                frappe.show_alert(__("Appointment Created Successfully"));
-            }
+            frappe.show_alert(__("Appointment Created Successfully"));
+
+            // if (response.message.status == "Unverified") {
+            //     frappe.show_alert(__("Please check your email to confirm the appointment"))
+            // } else {
+            //     frappe.show_alert(__("Appointment Created Successfully"));
+            // }
+            hide_next_button();
+            button.disabled = false;
+
             setTimeout(()=>{
                 let redirect_url = "/";
                 if (window.appointment_settings.success_redirect_url){
