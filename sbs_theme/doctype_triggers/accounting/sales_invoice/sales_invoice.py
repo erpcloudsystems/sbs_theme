@@ -23,6 +23,7 @@ def after_insert(doc, method=None):
 
 @frappe.whitelist()
 def onload(doc, method=None):
+    ################
     sales_invoices = frappe.get_all("Sales Invoice", {"docstatus": 1}, ["name"])
     for row in sales_invoices:
         sales_invoice = frappe.get_doc("Sales Invoice", row["name"])
