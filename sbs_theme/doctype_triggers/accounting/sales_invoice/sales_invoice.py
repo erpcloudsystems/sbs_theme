@@ -81,9 +81,9 @@ def create_qr_code(doc, method=None):
         )
 
     # Don't create QR Code if it already exists
-    qr_code = doc.get("ksa_einv_qr")
-    if qr_code and frappe.db.exists({"doctype": "File", "file_url": qr_code}):
-        return
+    # qr_code = doc.get("ksa_einv_qr")
+    # if qr_code and frappe.db.exists({"doctype": "File", "file_url": qr_code}):
+    #     return
 
     meta = frappe.get_meta(doc.doctype)
 
@@ -175,7 +175,6 @@ def create_qr_code(doc, method=None):
 
         # assigning to document
         doc.db_set("ksa_einv_qr", _file.file_url)
-        doc.db_set("custom_hash_qr_code", base64_string)
         doc.notify_update()
 
 def get_vat_amount(doc):
