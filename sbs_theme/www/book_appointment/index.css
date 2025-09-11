@@ -1,53 +1,138 @@
-.time-slot {
-    margin-bottom: 2em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    border-radius: 0.4em;
-    cursor: pointer;
-    border: 0.5px solid #cccccc;
-    min-height: 75px;
-    padding: 0.5em 1em;
+html,
+body {
+  min-height: 100%;
+  height: auto;
 }
 
-@media (max-width: 768px) {
-    #submit-button-area {
-        display: grid;
-        grid-template-areas:
-        "submit"
-        "back";
-    }
+body {
+  background-image: url("/assets/sbs_theme/images/home_herosection_bg.png");
+  background-size: cover;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
 }
-#customer-form{
-    border-color: black;
+
+#page-index {
+  background-color: rgba(255, 255, 255, 0.7);
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  height: auto;
 }
-#customer-form ::placeholder{
-    color: #ddd;
+
+/* اجبار التحرير داخل الحقل على LTR */
+input[type="date"] {
+  direction: ltr;
+  text-align: left;
 }
-#timeslot-container{
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
+/* محركات WebKit (كروم/إيدج/سفاري) */
+input[type="date"]::-webkit-datetime-edit {
+  direction: ltr;
+  text-align: left;
+}
+
+/* اختيارياً: تجربة خاصية تجريبية لتعيين اللغة */
+input[type="date"] {
+  -webkit-locale: "en-US"; /* قد لا تعمل بكل المتصفحات */
+}
+
+input[type="date"] {
+  font-variant-numeric: lining-nums;
+}
+
+.time-slot {
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0.5px solid #cccccc;
+  min-height: 75px;
+  padding: 0.5em 1em;
+  transition: 0.3s all linear;
+}
+
+#customer-form {
+  border-color: black;
+}
+#customer-form ::placeholder {
+  color: #ddd;
+}
+
+input,
+textarea {
+  background-color: transparent !important;
+  border-radius: 4px !important;
+  border: 1px solid #cec2ae !important;
+}
+
+input {
+  height: 40px !important;
+}
+
+button.btn {
+  height: 36px !important;
+  font-weight: bold !important;
+  background-color: #cec2ae !important;
+}
+
+#timeslot-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .time-slot:hover {
-    background: #ddd;
+  color: white;
+  background: #cec2ae;
 }
 
 .time-slot.unavailable {
-    background: #CBD5E0;
-    cursor: not-allowed;
-    color: #718096
+  background: #cbd5e0;
+  cursor: not-allowed;
+  color: #718096;
+  border: 1px solid #cbd5e0;
 }
 
 .time-slot.unavailable .text-muted {
-    color: #718096
+  color: #718096;
 }
 
 .time-slot.selected {
-    color: white;
-    background: var(--primary-color);
+  color: white;
+  background: #cec2ae;
 }
 
 .time-slot.selected .text-muted {
-    color: #EDF2F7 !important;
+  color: #edf2f7 !important;
+}
+
+#select-date-time .title h3,
+#enter-details .title h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+@media (min-width: 560px) {
+  #select-date-time .title h3,
+  #enter-details .title h3 {
+    font-size: 70px;
+  }
+}
+
+#select-date-time .title p,
+#enter-details .title p {
+  color: #777;
+}
+
+.date-span,
+.time-span {
+  font-weight: bold !important;
+  color: black;
+}
+
+/* Hide default footer and navbar */
+footer.web-footer,
+body > nav.navbar {
+  display: none !important;
 }
