@@ -113,6 +113,13 @@ def create_appointment(date, time, tz, contact):
 	appointment.customer_email = contact.get("email", None)
 	appointment.status = "Open"
 	appointment.insert(ignore_permissions=True)
+	lead = frappe.new_doc("Lead")
+	lead.first_name = contact.get("name", None)
+	lead.company_name = contact.get("company", None)
+	lead.email_id = contact.get("email", None)
+	lead.mobile_no = contact.get("number", None)
+	lead.insert(ignore_permissions=True)
+
 	return appointment
 
 

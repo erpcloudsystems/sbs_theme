@@ -77,7 +77,6 @@ function on_date_or_timezone_select() {
 }
 
 async function get_time_slots(date, timezone) {
-  console.log(timezone);
   let slots = (
     await frappe.call({
       method: "sbs_theme.www.book_appointment.index.get_appointment_slots",
@@ -270,7 +269,7 @@ async function submit() {
 
 function get_form_data() {
   let contact = {};
-  let inputs = ["name", "number", "notes", "email"];
+  let inputs = ["name", "number", "notes", "email", "company"];
   inputs.forEach(
     (id) => (contact[id] = document.getElementById(`customer_${id}`).value)
   );
