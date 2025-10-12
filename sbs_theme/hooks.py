@@ -792,6 +792,7 @@ web_include_css = "/assets/js/web_ecs.min.css"
 
 override_doctype_class = {
     "Appointment": "sbs_theme.overrides.CustomAppointment",
+    "Lead": "sbs_theme.overrides.CustomLead",
 }
 
 # Document Events
